@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\VGS.RetailOS.Shared\VGS.RetailOS.Shared.csproj" />
+    <ProjectReference Include="..\..\Contracts\VGS.RetailOS.Contracts\VGS.RetailOS.Contracts.csproj" />
+    <ProjectReference Include="..\..\Modules\VGS.RetailOS.Modules\VGS.RetailOS.Modules.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
