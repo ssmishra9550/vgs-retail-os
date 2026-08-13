@@ -1,0 +1,4798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VGS Retail OS Master Blueprint (Updated)</title>
+  <style>
+    :root { --bg:#f8fafc; --surface:#fff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#0f766e; --accent2:#0ea5e9; --code:#f3f4f6; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; background:linear-gradient(180deg,#eef6ff 0%,var(--bg) 240px); color:var(--ink); line-height:1.65; }
+    .wrap { max-width:1100px; margin:0 auto; padding:28px 18px 56px; }
+    .doc { background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:0 10px 28px rgba(15,23,42,.06); overflow:hidden; }
+    header { padding:26px 28px; border-bottom:1px solid var(--line); background:linear-gradient(120deg,rgba(15,118,110,.1),rgba(14,165,233,.08)); }
+    header h1 { margin:0; font-size:clamp(1.3rem,2.3vw,2rem); }
+    header p { margin:8px 0 0; color:var(--muted); font-size:.97rem; }
+    main { padding:28px; }
+    h1,h2,h3,h4,h5,h6 { color:#0f172a; line-height:1.3; margin-top:1.2em; margin-bottom:.55em; }
+    h1 { font-size:1.9rem; border-bottom:2px solid #dbeafe; padding-bottom:.22em; }
+    h2 { font-size:1.45rem; border-bottom:1px solid var(--line); padding-bottom:.2em; }
+    h3 { font-size:1.2rem; }
+    p { margin:.68em 0; }
+    ul,ol { margin:.45em 0 .95em 1.4em; }
+    li { margin:.26em 0; }
+    blockquote { margin:1em 0; padding:.6em 1em; border-left:4px solid var(--accent2); background:#eff6ff; }
+    table { border-collapse:collapse; width:100%; margin:1em 0; font-size:.95rem; }
+    th,td { border:1px solid var(--line); padding:.56em .7em; vertical-align:top; }
+    th { background:#f8fafc; text-align:left; }
+    code { background:var(--code); padding:.15em .33em; border-radius:5px; font-size:.9em; }
+    pre { background:#0b1220; color:#e5e7eb; padding:14px; border-radius:10px; overflow-x:auto; }
+    pre code { background:transparent; padding:0; color:inherit; }
+    details { margin-top:2rem; border:1px solid var(--line); border-radius:12px; background:#f9fafb; }
+    summary { cursor:pointer; padding:12px 14px; font-weight:600; }
+    .verbatim { white-space:pre-wrap; margin:0; padding:14px; border-top:1px solid var(--line); background:#ffffff; color:#111827; }
+    hr { border:none; border-top:1px solid var(--line); margin:1.25em 0; }
+    @media (max-width:700px) { .wrap { padding:12px; } main { padding:16px; } header { padding:18px; } table { font-size:.88rem; } th,td { padding:.45em .5em; } }
+    @media print { body { background:#fff; } .wrap { max-width:none; padding:0; } .doc { border:none; box-shadow:none; border-radius:0; } header { background:none; } a { color:inherit; text-decoration:none; } details { border:none; } summary { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="doc">
+      <header>
+        <h1>VGS Retail OS Master Blueprint (Updated)</h1>
+        <p>Source: VGS_Retail_OS_Master_Blueprint_Updated.md | Rendered + verbatim source for zero point loss.</p>
+      </header>
+      <main>
+        <h1 id="master-prompt-vgs-retail-os">MASTER PROMPT — VGS RETAIL OS</h1>
+<h2 id="create-a-professional-product-vision-technical-blueprint-20-year-roadmap-html-document">Create a Professional Product Vision + Technical Blueprint + 20-Year Roadmap HTML Document</h2>
+<p>You are acting as a combination of:</p>
+<ul>
+<li>Senior Product Manager</li>
+<li>Enterprise Solution Architect</li>
+<li>SaaS Product Strategist</li>
+<li>Retail Domain Expert</li>
+<li>UX/UI Designer</li>
+<li>Technical Writer</li>
+<li>Business Analyst</li>
+<li>AI Product Architect</li>
+</ul>
+<p>Your job is to create a <strong>complete, professional, visually impressive HTML-based product document</strong> for a product called:</p>
+<h1 id="vgs-retail-os">VGS RETAIL OS</h1>
+<p>The final document must be understandable to:</p>
+<ol>
+<li>A non-technical business owner</li>
+<li>A family member or business partner</li>
+<li>An investor</li>
+<li>A product manager</li>
+<li>A software developer</li>
+<li>An AI coding agent such as Claude Code / GitHub Copilot</li>
+</ol>
+<p>The document must explain both:</p>
+<ul>
+<li>WHAT the product is</li>
+<li>HOW it will be built</li>
+<li>WHY it is being built</li>
+<li>HOW it will evolve over 20 years</li>
+</ul>
+<p>Do NOT create a short overview.</p>
+<p>Create a serious <strong>Product Vision + Business Blueprint + Technical Architecture + Feature Specification + Development Roadmap</strong>.</p>
+<hr />
+<h1 id="1-context">1. CONTEXT</h1>
+<p>The founder currently operates:</p>
+<h2 id="vgs-group">VGS Group</h2>
+<p>VGS currently has:</p>
+<ul>
+<li>5 physical retail stores</li>
+</ul>
+<p>The real business problem is that as the number of stores increases, it becomes difficult to manually manage:</p>
+<ul>
+<li>Sales</li>
+<li>Billing</li>
+<li>Purchase</li>
+<li>Inventory</li>
+<li>Store-to-store stock transfer</li>
+<li>Customers</li>
+<li>Suppliers</li>
+<li>Payments</li>
+<li>Expenses</li>
+<li>Employees</li>
+<li>Reports</li>
+<li>Profit visibility</li>
+<li>Stock availability</li>
+<li>Business performance</li>
+</ul>
+<p>The founder wants to build an internal system for VGS first.</p>
+<p>However, this must NOT be a hard-coded VGS-only application.</p>
+<p>The long-term goal is:</p>
+<blockquote>
+<p>Build a professional retail management SaaS platform that can first run VGS Group and later be sold to other retail businesses.</p>
+</blockquote>
+<p>Therefore:</p>
+<h2 id="vgs-is-the-first-real-customer-and-pilot">VGS is the first real customer and pilot.</h2>
+<p>The software should eventually support:</p>
+<ul>
+<li>1 store</li>
+<li>5 stores</li>
+<li>20 stores</li>
+<li>100+ stores</li>
+</ul>
+<p>and multiple independent businesses.</p>
+<hr />
+<h1 id="2-product-name">2. PRODUCT NAME</h1>
+<p>Use:</p>
+<h1 id="vgs-retail-os_1">VGS Retail OS</h1>
+<p>Suggested positioning:</p>
+<blockquote>
+<p>"Run Your Entire Retail Business in One Place."</p>
+</blockquote>
+<p>Alternative description:</p>
+<blockquote>
+<p>"A complete digital operating system for modern retail businesses."</p>
+</blockquote>
+<p>Do not overuse marketing language.</p>
+<p>The document should remain professional and realistic.</p>
+<hr />
+<h1 id="3-core-product-idea">3. CORE PRODUCT IDEA</h1>
+<p>Explain the product in extremely simple language.</p>
+<p>Use this analogy:</p>
+<blockquote>
+<p>VGS Retail OS is the digital control room of a retail business.</p>
+</blockquote>
+<p>The owner should be able to open one dashboard and understand:</p>
+<ul>
+<li>How much did I sell today?</li>
+<li>Which store performed best?</li>
+<li>Which products are selling?</li>
+<li>Which products are low in stock?</li>
+<li>What did I purchase?</li>
+<li>How much do I owe suppliers?</li>
+<li>How much customers owe me?</li>
+<li>What expenses happened?</li>
+<li>What is my business performance?</li>
+<li>What needs my attention today?</li>
+</ul>
+<p>The system should connect all these activities.</p>
+<hr />
+<h3 id="advanced-platform-direction">Advanced platform direction</h3>
+<p>In addition to the original retail-management capabilities, the long-term platform<br />
+will be designed to support five strategic capabilities:</p>
+<ul>
+<li>Event Sourcing &amp; CQRS</li>
+<li>B2B Network &amp; Supply Chain</li>
+<li>Omnichannel Commerce</li>
+<li>Fraud Detection &amp; Risk Engine</li>
+<li>True Offline-First Sync</li>
+</ul>
+<p>These are intentionally phased after the core retail workflows are stable.</p>
+<h1 id="4-important-product-principle">4. IMPORTANT PRODUCT PRINCIPLE</h1>
+<p>Do NOT position this as:</p>
+<blockquote>
+<p>"Just another billing software."</p>
+</blockquote>
+<p>It should be positioned as:</p>
+<h1 id="retail-business-operating-system">Retail Business Operating System</h1>
+<p>The product should eventually combine:</p>
+<ul>
+<li>POS</li>
+<li>Billing</li>
+<li>Inventory</li>
+<li>Purchase</li>
+<li>Sales</li>
+<li>Customer Management</li>
+<li>Supplier Management</li>
+<li>Expenses</li>
+<li>Payments</li>
+<li>Store Management</li>
+<li>Employee Management</li>
+<li>Reporting</li>
+<li>Analytics</li>
+<li>Automation</li>
+<li>Event Sourcing &amp; CQRS</li>
+<li>Offline-First Sync</li>
+<li>B2B Network &amp; Supply Chain</li>
+<li>Omnichannel Commerce</li>
+<li>Fraud Detection &amp; Risk Engine</li>
+<li>AI</li>
+</ul>
+<hr />
+<h1 id="5-document-goal">5. DOCUMENT GOAL</h1>
+<p>Create a complete document that answers these questions:</p>
+<h3 id="business-questions">Business questions</h3>
+<ul>
+<li>What problem are we solving?</li>
+<li>Who has this problem?</li>
+<li>Why does it matter?</li>
+<li>Why will customers pay for it?</li>
+<li>What makes the product different?</li>
+<li>Who are the target customers?</li>
+<li>What is the business model?</li>
+<li>How does VGS become the first pilot?</li>
+<li>How can this become SaaS?</li>
+</ul>
+<h3 id="product-questions">Product questions</h3>
+<ul>
+<li>What modules exist?</li>
+<li>What does every module do?</li>
+<li>Who uses each module?</li>
+<li>What is the workflow?</li>
+<li>How do modules interact?</li>
+</ul>
+<h3 id="technical-questions">Technical questions</h3>
+<ul>
+<li>Which technology will be used?</li>
+<li>Why?</li>
+<li>What architecture will be used?</li>
+<li>How will multi-tenancy work?</li>
+<li>How will security work?</li>
+<li>How will data be stored?</li>
+<li>How will APIs work?</li>
+<li>How will the system scale?</li>
+</ul>
+<h3 id="future-questions">Future questions</h3>
+<ul>
+<li>What happens after MVP?</li>
+<li>What happens after 1 year?</li>
+<li>3 years?</li>
+<li>5 years?</li>
+<li>10 years?</li>
+<li>20 years?</li>
+<li>Where does AI fit?</li>
+<li>Where does automation fit?</li>
+<li>How can this become a large retail platform?</li>
+</ul>
+<hr />
+<h1 id="6-technology-stack">6. TECHNOLOGY STACK</h1>
+<p>The proposed technology stack is:</p>
+<h2 id="frontend">Frontend</h2>
+<p>Angular</p>
+<h2 id="backend">Backend</h2>
+<p>ASP.NET Core Web API</p>
+<h2 id="database">Database</h2>
+<p>PostgreSQL</p>
+<h2 id="cache">Cache</h2>
+<p>Redis</p>
+<h2 id="background-processing">Background Processing</h2>
+<p>.NET Worker Services / Hangfire-style job processing</p>
+<h2 id="containerization">Containerization</h2>
+<p>Docker</p>
+<h2 id="source-control">Source Control</h2>
+<p>Git + GitHub</p>
+<h2 id="ai-development">AI Development</h2>
+<p>Claude Code + GitHub Copilot</p>
+<h2 id="future-mobile">Future Mobile</h2>
+<p>PWA initially</p>
+<p>Android / iOS later if required</p>
+<h2 id="cloud">Cloud</h2>
+<p>Architecture should remain cloud-ready.</p>
+<p>Possible future infrastructure:</p>
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>Other cloud providers</li>
+</ul>
+<p>Do not hard-code the product to one cloud provider.</p>
+<hr />
+<h1 id="7-architecture-principle">7. ARCHITECTURE PRINCIPLE</h1>
+<p>Start with:</p>
+<h1 id="modular-monolith">Modular Monolith</h1>
+<p>Do NOT start with microservices.</p>
+<p>Explain why:</p>
+<ul>
+<li>Easier development</li>
+<li>Easier deployment</li>
+<li>Easier debugging</li>
+<li>Lower infrastructure complexity</li>
+<li>Suitable for MVP and early SaaS</li>
+<li>Clear module boundaries</li>
+<li>Can evolve into distributed services later if required</li>
+</ul>
+<p>The architecture must still have strong domain boundaries.</p>
+<hr />
+<h1 id="8-high-level-architecture">8. HIGH-LEVEL ARCHITECTURE</h1>
+<p>Create a beautiful visual architecture diagram.</p>
+<p>Show:</p>
+<p>User<br />
+↓<br />
+Angular / PWA<br />
+↓<br />
+ASP.NET Core API<br />
+↓<br />
+Business Modules<br />
+↓<br />
+PostgreSQL</p>
+<p>Also show:</p>
+<p>Redis<br />
+Background Jobs<br />
+File Storage<br />
+Notifications<br />
+External Integrations<br />
+AI Layer</p>
+<p>Create an attractive architecture diagram using HTML/CSS/SVG.</p>
+<p>Do NOT use ASCII art.</p>
+<hr />
+<h1 id="9-multi-tenant-architecture">9. MULTI-TENANT ARCHITECTURE</h1>
+<p>This is extremely important.</p>
+<p>Explain:</p>
+<p>One platform can serve many businesses.</p>
+<p>Example:</p>
+<p>Tenant 1:<br />
+VGS Group<br />
+- Store 1<br />
+- Store 2<br />
+- Store 3<br />
+- Store 4<br />
+- Store 5</p>
+<p>Tenant 2:<br />
+Sharma Garments<br />
+- Store 1<br />
+- Store 2</p>
+<p>Tenant 3:<br />
+Gupta Home Store<br />
+- Store 1</p>
+<p>Each tenant must have isolated data.</p>
+<p>Explain:</p>
+<ul>
+<li>Tenant</li>
+<li>Organization</li>
+<li>Store</li>
+<li>User</li>
+<li>Role</li>
+<li>Permission</li>
+</ul>
+<p>Create a visual diagram.</p>
+<hr />
+<h1 id="10-main-modules">10. MAIN MODULES</h1>
+<p>Create a dedicated section for every module.</p>
+<p>At minimum include:</p>
+<ol>
+<li>Authentication</li>
+<li>Tenant Management</li>
+<li>Organization</li>
+<li>Store Management</li>
+<li>User Management</li>
+<li>Roles &amp; Permissions</li>
+<li>Product Management</li>
+<li>Category Management</li>
+<li>Brand Management</li>
+<li>Unit Management</li>
+<li>Tax Configuration</li>
+<li>Customer Management</li>
+<li>Supplier Management</li>
+<li>Purchase</li>
+<li>Purchase Return</li>
+<li>Inventory</li>
+<li>Stock Ledger</li>
+<li>Stock Transfer</li>
+<li>Stock Adjustment</li>
+<li>POS</li>
+<li>Sales</li>
+<li>Billing</li>
+<li>Invoice</li>
+<li>Payment</li>
+<li>Sales Return</li>
+<li>Expenses</li>
+<li>Receivables</li>
+<li>Payables</li>
+<li>Notifications</li>
+<li>Dashboard</li>
+<li>Reports</li>
+<li>Audit Logs</li>
+<li>Settings</li>
+<li>Subscription / SaaS</li>
+<li>Integrations</li>
+<li>Automation</li>
+<li>AI Insights</li>
+</ol>
+<p>For every module explain:</p>
+<ul>
+<li>Purpose</li>
+<li>Who uses it</li>
+<li>Main screens</li>
+<li>Main features</li>
+<li>Inputs</li>
+<li>Outputs</li>
+<li>Business rules</li>
+<li>Dependencies</li>
+<li>Future improvements</li>
+</ul>
+<hr />
+<h1 id="11-pos-billing-specification">11. POS / BILLING SPECIFICATION</h1>
+<p>Create a detailed POS section.</p>
+<p>Explain the complete flow:</p>
+<p>Customer enters store<br />
+↓<br />
+Cashier scans/searches product<br />
+↓<br />
+Product added to cart<br />
+↓<br />
+Quantity selected<br />
+↓<br />
+Discount<br />
+↓<br />
+Tax<br />
+↓<br />
+Customer selected if required<br />
+↓<br />
+Payment method<br />
+↓<br />
+Sale completed<br />
+↓<br />
+Invoice generated<br />
+↓<br />
+Inventory updated<br />
+↓<br />
+Payment recorded<br />
+↓<br />
+Receipt printed/shared</p>
+<p>Include:</p>
+<ul>
+<li>Barcode</li>
+<li>SKU</li>
+<li>Product search</li>
+<li>Quantity</li>
+<li>Discount</li>
+<li>Tax</li>
+<li>Multiple payment methods</li>
+<li>Cash</li>
+<li>UPI</li>
+<li>Card</li>
+<li>Credit</li>
+<li>Invoice</li>
+<li>Print</li>
+<li>PDF</li>
+<li>Share</li>
+<li>Reprint</li>
+<li>Hold bill</li>
+<li>Resume bill</li>
+<li>Sales return</li>
+<li>Cancellation/void</li>
+<li>Permission controls</li>
+</ul>
+<p>Create a beautiful POS UI mockup using HTML/CSS.</p>
+<hr />
+<h1 id="12-inventory-specification">12. INVENTORY SPECIFICATION</h1>
+<p>Explain inventory as the "stock truth".</p>
+<p>Show:</p>
+<p>Purchase<br />
+↓<br />
+Stock In<br />
+↓<br />
+Store Inventory<br />
+↓<br />
+Sale<br />
+↓<br />
+Stock Out</p>
+<p>Also:</p>
+<p>Store A<br />
+↓<br />
+Transfer<br />
+↓<br />
+Store B</p>
+<p>Include:</p>
+<ul>
+<li>Stock balance</li>
+<li>Stock ledger</li>
+<li>Stock movement</li>
+<li>Stock valuation</li>
+<li>Low stock</li>
+<li>Reorder level</li>
+<li>Stock adjustment</li>
+<li>Damaged stock</li>
+<li>Expired stock where applicable</li>
+<li>Transfer</li>
+<li>Return</li>
+<li>Inventory history</li>
+</ul>
+<p>Every stock-changing operation must create an auditable transaction.</p>
+<hr />
+<h1 id="13-purchase-module">13. PURCHASE MODULE</h1>
+<p>Explain:</p>
+<p>Supplier<br />
+↓<br />
+Purchase<br />
+↓<br />
+Purchase Items<br />
+↓<br />
+Receive Goods<br />
+↓<br />
+Inventory Increase<br />
+↓<br />
+Supplier Payable<br />
+↓<br />
+Payment</p>
+<p>Include:</p>
+<ul>
+<li>Purchase order</li>
+<li>Purchase receipt</li>
+<li>Purchase invoice</li>
+<li>Supplier</li>
+<li>Quantity</li>
+<li>Cost price</li>
+<li>Tax</li>
+<li>Discount</li>
+<li>Payment</li>
+<li>Outstanding</li>
+<li>Purchase return</li>
+</ul>
+<hr />
+<h1 id="14-store-transfer">14. STORE TRANSFER</h1>
+<p>Explain a real example:</p>
+<p>Store 2 has 50 blankets.</p>
+<p>Store 5 needs 20.</p>
+<p>Manager creates:</p>
+<p>Transfer Request<br />
+↓<br />
+Approval (if enabled)<br />
+↓<br />
+Dispatch<br />
+↓<br />
+In Transit<br />
+↓<br />
+Receive<br />
+↓<br />
+Stock updated</p>
+<p>Show before/after stock.</p>
+<hr />
+<h1 id="15-customer-management">15. CUSTOMER MANAGEMENT</h1>
+<p>Include:</p>
+<ul>
+<li>Customer profile</li>
+<li>Mobile</li>
+<li>Address</li>
+<li>Purchase history</li>
+<li>Outstanding balance</li>
+<li>Credit</li>
+<li>Returns</li>
+<li>Communication preferences</li>
+<li>Future loyalty system</li>
+</ul>
+<p>Explain future CRM capabilities.</p>
+<hr />
+<h1 id="16-supplier-management">16. SUPPLIER MANAGEMENT</h1>
+<p>Include:</p>
+<ul>
+<li>Supplier profile</li>
+<li>Contact</li>
+<li>GST information where applicable</li>
+<li>Purchase history</li>
+<li>Payment history</li>
+<li>Outstanding payable</li>
+<li>Purchase price history</li>
+<li>Supplier performance</li>
+</ul>
+<hr />
+<h1 id="17-expense-management">17. EXPENSE MANAGEMENT</h1>
+<p>Include:</p>
+<ul>
+<li>Rent</li>
+<li>Electricity</li>
+<li>Salary</li>
+<li>Transport</li>
+<li>Packaging</li>
+<li>Repairs</li>
+<li>Internet</li>
+<li>Miscellaneous</li>
+</ul>
+<p>Allow:</p>
+<ul>
+<li>Store-wise expenses</li>
+<li>Category-wise expenses</li>
+<li>Date-wise expenses</li>
+<li>Payment method</li>
+<li>Attachments</li>
+<li>Approval workflow in future</li>
+</ul>
+<hr />
+<h1 id="18-dashboard">18. DASHBOARD</h1>
+<p>Create a professional visual dashboard mockup.</p>
+<p>Show:</p>
+<p>Today's Sales<br />
+Today's Purchase<br />
+Expenses<br />
+Outstanding<br />
+Profit/Gross Margin view<br />
+Store Performance<br />
+Top Products<br />
+Low Stock<br />
+Pending Transfers<br />
+Supplier Payables<br />
+Customer Receivables</p>
+<p>Include charts.</p>
+<p>Do NOT make fake financial claims.</p>
+<p>Use clearly labelled example/demo numbers.</p>
+<hr />
+<h1 id="19-reports">19. REPORTS</h1>
+<p>Create categories:</p>
+<h2 id="sales-reports">Sales Reports</h2>
+<ul>
+<li>Daily</li>
+<li>Weekly</li>
+<li>Monthly</li>
+<li>Store-wise</li>
+<li>Product-wise</li>
+<li>Employee-wise</li>
+<li>Payment-wise</li>
+</ul>
+<h2 id="purchase-reports">Purchase Reports</h2>
+<ul>
+<li>Supplier-wise</li>
+<li>Product-wise</li>
+<li>Store-wise</li>
+<li>Date-wise</li>
+</ul>
+<h2 id="inventory-reports">Inventory Reports</h2>
+<ul>
+<li>Current Stock</li>
+<li>Stock Movement</li>
+<li>Stock Valuation</li>
+<li>Low Stock</li>
+<li>Slow Moving</li>
+<li>Fast Moving</li>
+<li>Dead Stock</li>
+</ul>
+<h2 id="financial-operational-reports">Financial / Operational Reports</h2>
+<ul>
+<li>Expenses</li>
+<li>Receivables</li>
+<li>Payables</li>
+<li>Gross Profit</li>
+<li>Store Comparison</li>
+</ul>
+<p>Explain that statutory accounting/GST capabilities should be validated against current requirements before production use.</p>
+<hr />
+<h1 id="20-user-roles">20. USER ROLES</h1>
+<p>Create a permissions matrix.</p>
+<p>Roles:</p>
+<ul>
+<li>Super Admin</li>
+<li>Business Owner</li>
+<li>Store Manager</li>
+<li>Cashier</li>
+<li>Inventory Manager</li>
+<li>Purchase Manager</li>
+<li>Accountant</li>
+<li>Auditor</li>
+<li>Support Admin</li>
+</ul>
+<p>Show what each role can access.</p>
+<hr />
+<h1 id="21-database-design">21. DATABASE DESIGN</h1>
+<p>Create a conceptual ER diagram using SVG.</p>
+<p>Core entities:</p>
+<p>Tenant<br />
+Organization<br />
+Store<br />
+User<br />
+Role<br />
+Permission</p>
+<p>Product<br />
+Category<br />
+Brand<br />
+Unit<br />
+TaxCategory</p>
+<p>Customer<br />
+Supplier</p>
+<p>Purchase<br />
+PurchaseItem<br />
+PurchasePayment</p>
+<p>Sale<br />
+SaleItem<br />
+SalePayment</p>
+<p>Invoice</p>
+<p>InventoryTransaction<br />
+StockTransfer<br />
+StockTransferItem</p>
+<p>Expense</p>
+<p>Return<br />
+ReturnItem</p>
+<p>Notification</p>
+<p>AuditLog</p>
+<p>Subscription<br />
+SubscriptionPlan</p>
+<p>Explain relationships.</p>
+<p>Do NOT pretend this is the final production schema.</p>
+<p>Call it:</p>
+<p>"Conceptual Data Model"</p>
+<hr />
+<h1 id="22-important-data-principle">22. IMPORTANT DATA PRINCIPLE</h1>
+<p>Explain this clearly:</p>
+<p>Never directly change stock without recording why.</p>
+<p>Example:</p>
+<p>Purchase +100<br />
+Sale -3<br />
+Transfer Out -20<br />
+Transfer In +20<br />
+Return +1<br />
+Adjustment -2</p>
+<p>The system must be able to answer:</p>
+<blockquote>
+<p>"Why is current stock 96?"</p>
+</blockquote>
+<p>This is critical.</p>
+<hr />
+<h1 id="23-api-architecture">23. API ARCHITECTURE</h1>
+<p>Explain REST API structure.</p>
+<p>Example:</p>
+<p>/api/v1/auth</p>
+<p>/api/v1/tenants</p>
+<p>/api/v1/stores</p>
+<p>/api/v1/products</p>
+<p>/api/v1/customers</p>
+<p>/api/v1/suppliers</p>
+<p>/api/v1/purchases</p>
+<p>/api/v1/inventory</p>
+<p>/api/v1/transfers</p>
+<p>/api/v1/sales</p>
+<p>/api/v1/pos</p>
+<p>/api/v1/payments</p>
+<p>/api/v1/expenses</p>
+<p>/api/v1/reports</p>
+<p>/api/v1/notifications</p>
+<p>/api/v1/subscriptions</p>
+<p>Explain:</p>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Validation</li>
+<li>Error handling</li>
+<li>Pagination</li>
+<li>Filtering</li>
+<li>Sorting</li>
+<li>Audit</li>
+<li>API versioning</li>
+</ul>
+<hr />
+<h1 id="24-frontend-structure">24. FRONTEND STRUCTURE</h1>
+<p>Explain Angular architecture.</p>
+<p>Show:</p>
+<p>Application Shell<br />
+↓<br />
+Core<br />
+↓<br />
+Shared<br />
+↓<br />
+Feature Modules</p>
+<p>Possible features:</p>
+<ul>
+<li>auth</li>
+<li>dashboard</li>
+<li>pos</li>
+<li>products</li>
+<li>inventory</li>
+<li>purchases</li>
+<li>sales</li>
+<li>customers</li>
+<li>suppliers</li>
+<li>expenses</li>
+<li>reports</li>
+<li>settings</li>
+</ul>
+<p>Explain:</p>
+<ul>
+<li>routing</li>
+<li>guards</li>
+<li>interceptors</li>
+<li>state management</li>
+<li>reusable components</li>
+<li>forms</li>
+<li>tables</li>
+<li>notifications</li>
+<li>responsive design</li>
+</ul>
+<hr />
+<h1 id="25-backend-structure">25. BACKEND STRUCTURE</h1>
+<p>Show a recommended structure such as:</p>
+<p>backend/</p>
+<p>src/</p>
+<p>Modules/</p>
+<p>Auth/<br />
+Tenant/<br />
+Organization/<br />
+Store/<br />
+User/<br />
+Product/<br />
+Customer/<br />
+Supplier/<br />
+Purchase/<br />
+Inventory/<br />
+Transfer/<br />
+Sales/<br />
+POS/<br />
+Payment/<br />
+Expense/<br />
+Reports/<br />
+Notification/<br />
+Audit/<br />
+Subscription/</p>
+<p>Shared/</p>
+<p>Explain why vertical feature modules are preferred.</p>
+<hr />
+<h1 id="26-security">26. SECURITY</h1>
+<p>Create a dedicated security section.</p>
+<p>Include:</p>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>RBAC</li>
+<li>Tenant isolation</li>
+<li>Input validation</li>
+<li>SQL injection protection</li>
+<li>Secure secrets</li>
+<li>HTTPS</li>
+<li>Encryption</li>
+<li>Audit logs</li>
+<li>Rate limiting</li>
+<li>Backups</li>
+<li>Monitoring</li>
+<li>Disaster recovery</li>
+<li>Session security</li>
+<li>Production access control</li>
+</ul>
+<p>Explain that security must exist from version 1.</p>
+<hr />
+<h1 id="27-offline-mode">27. OFFLINE MODE</h1>
+<p>Explain that retail businesses may experience internet problems.</p>
+<p>Create a future strategy:</p>
+<p>Online Mode<br />
+↓<br />
+Local/PWA cache<br />
+↓<br />
+Controlled offline transactions<br />
+↓<br />
+Internet restored<br />
+↓<br />
+Sync<br />
+↓<br />
+Validation<br />
+↓<br />
+Cloud</p>
+<p>Clearly explain:</p>
+<p>Offline synchronization is complex.</p>
+<p>Do not implement it blindly in MVP.</p>
+<p>Define conflict rules before enabling offline stock-changing operations.</p>
+<hr />
+<hr />
+<p>[L+ADV] # ADVANCED ARCHITECTURE &amp; FUTURE PLATFORM CAPABILITIES</p>
+<p>The following five capabilities are strategic additions to the original VGS Retail OS<br />
+blueprint. They must be treated as first-class product and architecture capabilities,<br />
+while still being phased appropriately so that the MVP is not over-engineered.</p>
+<p>These capabilities are:</p>
+<ol>
+<li>Event Sourcing &amp; CQRS</li>
+<li>B2B Network &amp; Supply Chain</li>
+<li>Omnichannel Commerce</li>
+<li>Fraud Detection &amp; Risk Engine</li>
+<li>True Offline-First Sync</li>
+</ol>
+<p>The product must also connect these capabilities with the existing Automation Engine<br />
+and AI Vision already defined in this blueprint.</p>
+<hr />
+<p>[L+ADV] ## A. EVENT SOURCING &amp; CQRS</p>
+<h3 id="why-this-is-being-added">Why this is being added</h3>
+<p>The system must be able to answer not only:</p>
+<blockquote>
+<p>"What is the current stock?"</p>
+</blockquote>
+<p>but also:</p>
+<blockquote>
+<p>"Why is the current stock this amount?"</p>
+</blockquote>
+<p>Traditional CRUD stores the latest state. For important business operations,<br />
+VGS Retail OS should additionally preserve the business events that produced that state.</p>
+<p>Example:</p>
+<p>Purchase +100<br />
+Sale -3<br />
+Transfer Out -20<br />
+Transfer In +20<br />
+Return +1<br />
+Adjustment -2</p>
+<p>The current state can therefore be explained from the business history.</p>
+<h3 id="important-principle">Important principle</h3>
+<p>Do NOT use Event Sourcing blindly for every table.</p>
+<p>Use it selectively for business-critical, audit-sensitive domains such as:</p>
+<ul>
+<li>Sales</li>
+<li>Inventory</li>
+<li>Purchase</li>
+<li>Payments</li>
+<li>Transfers</li>
+<li>Returns</li>
+<li>Important financial/business state changes</li>
+</ul>
+<p>Normal CRUD can remain appropriate for:</p>
+<ul>
+<li>Product master data</li>
+<li>Categories</li>
+<li>Brands</li>
+<li>UI configuration</li>
+<li>Other low-risk configuration data</li>
+</ul>
+<h3 id="event-model">Event model</h3>
+<p>Each important event should conceptually contain:</p>
+<ul>
+<li>EventId</li>
+<li>TenantId</li>
+<li>StoreId</li>
+<li>AggregateId</li>
+<li>AggregateType</li>
+<li>EventType</li>
+<li>Version</li>
+<li>OccurredAt</li>
+<li>UserId</li>
+<li>CorrelationId</li>
+<li>CausationId</li>
+<li>Payload</li>
+<li>Metadata</li>
+</ul>
+<h3 id="example">Example</h3>
+<p>SALE_COMPLETED</p>
+<p>↓</p>
+<p>Inventory Projection</p>
+<p>Payment Projection</p>
+<p>Customer History Projection</p>
+<p>Analytics Projection</p>
+<p>Risk Engine</p>
+<p>Notification</p>
+<p>Audit</p>
+<h3 id="cqrs">CQRS</h3>
+<p>Separate:</p>
+<p>COMMAND SIDE<br />
+- Receives business commands<br />
+- Validates permissions<br />
+- Applies business rules<br />
+- Produces events</p>
+<p>QUERY SIDE<br />
+- Reads optimized projections/read models<br />
+- Powers dashboards<br />
+- Powers reports<br />
+- Powers operational screens</p>
+<p>Conceptual flow:</p>
+<p>Command<br />
+→ Validation<br />
+→ Business Rules<br />
+→ Event Store<br />
+→ Projection<br />
+→ Read Model<br />
+→ Dashboard / Reports</p>
+<h3 id="important-trade-off">Important trade-off</h3>
+<p>CQRS and Event Sourcing introduce complexity.</p>
+<p>They should be implemented where they create real business value, not simply<br />
+because they are fashionable architectural patterns.</p>
+<hr />
+<p>[L+ADV] ## B. B2B NETWORK &amp; SUPPLY CHAIN</p>
+<p>The long-term platform should connect retailers and suppliers.</p>
+<p>The future network can look like:</p>
+<p>Manufacturer<br />
+→ Distributor<br />
+→ Supplier<br />
+→ Retailer<br />
+→ Store<br />
+→ Customer</p>
+<h3 id="supplier-portal">Supplier Portal</h3>
+<p>Suppliers should eventually be able to:</p>
+<ul>
+<li>Create/manage company profile</li>
+<li>Manage product catalogue</li>
+<li>Receive purchase orders</li>
+<li>Accept/reject orders</li>
+<li>Confirm quantities</li>
+<li>Confirm delivery dates</li>
+<li>Update dispatch status</li>
+<li>Upload invoices</li>
+<li>View payment status</li>
+<li>Handle returns</li>
+<li>Communicate with retailers</li>
+</ul>
+<h3 id="b2b-purchase-flow">B2B Purchase Flow</h3>
+<p>Retailer<br />
+→ Purchase Order<br />
+→ Supplier Confirmation<br />
+→ Dispatch<br />
+→ Delivery<br />
+→ Goods Receiving<br />
+→ Inventory<br />
+→ Payable<br />
+→ Payment</p>
+<h3 id="future-b2b-capabilities">Future B2B capabilities</h3>
+<ul>
+<li>Supplier discovery</li>
+<li>Supplier comparison</li>
+<li>Price comparison</li>
+<li>Availability comparison</li>
+<li>Lead-time comparison</li>
+<li>Supplier performance score</li>
+<li>Purchase recommendations</li>
+<li>Reorder automation</li>
+<li>Supplier communication</li>
+</ul>
+<p>The B2B network should be introduced only after the core VGS retail workflows<br />
+are stable.</p>
+<hr />
+<p>[L+ADV] ## C. OMNICHANNEL COMMERCE</p>
+<p>VGS Retail OS should eventually connect:</p>
+<ul>
+<li>Physical stores</li>
+<li>Online store</li>
+<li>WhatsApp commerce where supported</li>
+<li>Future mobile channels</li>
+<li>Future marketplace integrations</li>
+</ul>
+<p>All channels should connect to the same business core.</p>
+<h3 id="one-business-core">One business core</h3>
+<p>Customer<br />
+→ Channel<br />
+→ Order<br />
+→ VGS Retail OS<br />
+→ Inventory<br />
+→ Payment<br />
+→ Fulfillment<br />
+→ Customer History</p>
+<h3 id="one-inventory-concept">One Inventory Concept</h3>
+<p>The platform should distinguish between:</p>
+<ul>
+<li>Physical stock</li>
+<li>Reserved stock</li>
+<li>Available stock</li>
+<li>In-transit stock</li>
+<li>Channel-specific allocation</li>
+</ul>
+<p>Example:</p>
+<p>Total Stock = 100</p>
+<p>Physical Store = 60<br />
+Online Reserved = 25<br />
+WhatsApp Orders = 15</p>
+<h3 id="online-store">Online Store</h3>
+<p>Future flow:</p>
+<p>Customer<br />
+→ Online Store<br />
+→ Product Catalogue<br />
+→ Cart<br />
+→ Checkout<br />
+→ Payment<br />
+→ Order<br />
+→ VGS Retail OS<br />
+→ Inventory<br />
+→ Fulfillment</p>
+<h3 id="whatsapp">WhatsApp</h3>
+<p>Future capability may allow:</p>
+<p>Customer asks for a product<br />
+→ System identifies available products<br />
+→ Customer receives product information<br />
+→ Customer places order<br />
+→ Order enters VGS Retail OS</p>
+<p>Actual WhatsApp functionality must depend on current Meta APIs,<br />
+business account requirements, policies and commercial constraints.</p>
+<p>Do not promise literal one-click or unlimited integration without verification.</p>
+<hr />
+<p>[L+ADV] ## D. FRAUD DETECTION &amp; RISK ENGINE</p>
+<p>Create a dedicated:</p>
+<h1 id="retail-risk-fraud-detection-engine">Retail Risk &amp; Fraud Detection Engine</h1>
+<p>The system should detect unusual activity, not automatically accuse people.</p>
+<h3 id="signals">Signals</h3>
+<ul>
+<li>Excessive bill cancellations</li>
+<li>Excessive discounts</li>
+<li>Suspicious returns</li>
+<li>Cash variance</li>
+<li>Stock variance</li>
+<li>Frequent manual stock adjustments</li>
+<li>Repeated bill edits</li>
+<li>Unusual transaction timing</li>
+<li>Unusual transaction values</li>
+<li>Unusual employee/store patterns</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p>Cashier A:<br />
+100 bills<br />
+15 cancellations</p>
+<p>Cashier B:<br />
+110 bills<br />
+2 cancellations</p>
+<p>The system can flag Cashier A for review.</p>
+<p>Another example:</p>
+<p>Sale = ₹10,000<br />
+Discount = ₹8,000</p>
+<p>This may create an elevated-risk alert.</p>
+<p>Another example:</p>
+<p>Expected Cash = ₹50,000<br />
+Actual Cash = ₹47,500</p>
+<p>Create a cash variance alert.</p>
+<h3 id="risk-architecture">Risk Architecture</h3>
+<p>Transactions<br />
+→ Events<br />
+→ Rules<br />
+→ Statistical Analysis<br />
+→ Optional AI/ML Analysis<br />
+→ Risk Score<br />
+→ Alert<br />
+→ Investigation Case<br />
+→ Human Review</p>
+<h3 id="risk-language">Risk language</h3>
+<p>Use:</p>
+<ul>
+<li>Unusual</li>
+<li>Suspicious</li>
+<li>Elevated Risk</li>
+<li>Requires Review</li>
+</ul>
+<p>Do not use:</p>
+<ul>
+<li>Guilty</li>
+<li>Fraudulent Employee</li>
+</ul>
+<p>unless a separate authorized investigation establishes that conclusion.</p>
+<h3 id="rule-examples">Rule examples</h3>
+<p>IF cancellation_count &gt; threshold<br />
+THEN create risk alert</p>
+<p>IF discount &gt; threshold<br />
+THEN flag transaction</p>
+<p>IF cash_variance &gt; threshold<br />
+THEN create investigation</p>
+<p>IF stock_adjustments are unusually frequent<br />
+THEN flag store/user</p>
+<p>The thresholds must be configurable and validated using real VGS data.</p>
+<hr />
+<p>[L+ADV] ## E. TRUE OFFLINE-FIRST SYNC</p>
+<p>Offline operation is a core retail reliability capability.</p>
+<p>The system should allow selected retail operations to continue when internet<br />
+connectivity temporarily disappears.</p>
+<h3 id="normal-mode">Normal mode</h3>
+<p>POS<br />
+→ Internet<br />
+→ API<br />
+→ Cloud</p>
+<h3 id="offline-mode">Offline mode</h3>
+<p>POS<br />
+→ Local Application<br />
+→ Local Database<br />
+→ Sync Queue</p>
+<h3 id="when-internet-returns">When internet returns</h3>
+<p>Sync Queue<br />
+→ Server Validation<br />
+→ Accepted<br />
+OR<br />
+→ Conflict<br />
+→ Conflict Resolution</p>
+<h3 id="offline-technology-direction">Offline technology direction</h3>
+<p>Evaluate:</p>
+<ul>
+<li>Angular PWA</li>
+<li>IndexedDB or equivalent browser storage</li>
+<li>Local transaction store</li>
+<li>Device identity</li>
+<li>Sync queue</li>
+<li>Event IDs</li>
+<li>Idempotency keys</li>
+<li>Retry strategy</li>
+<li>Conflict detection</li>
+<li>Conflict resolution</li>
+<li>Server reconciliation</li>
+<li>Sync status UI</li>
+</ul>
+<h3 id="offline-pos">Offline POS</h3>
+<p>At minimum, the design should consider offline support for:</p>
+<ul>
+<li>Product lookup from locally cached catalogue</li>
+<li>Cart creation</li>
+<li>Selected sales</li>
+<li>Payment recording according to configured policy</li>
+<li>Receipt generation</li>
+<li>Local transaction history</li>
+</ul>
+<p>Stock-changing offline operations must be carefully controlled.</p>
+<h3 id="conflict-example">Conflict example</h3>
+<p>Store A is offline and believes stock = 10.</p>
+<p>Store A sells 3.</p>
+<p>Another device also performs an operation against the same stock state.</p>
+<p>When connectivity returns, the server must reconcile the events deterministically.</p>
+<p>Possible strategies include:</p>
+<ul>
+<li>Server-authoritative validation</li>
+<li>Store-local stock boundaries</li>
+<li>Reservations</li>
+<li>Event reconciliation</li>
+<li>Conflict queues</li>
+<li>Human review for exceptional cases</li>
+</ul>
+<p>Do not pretend offline synchronization is trivial.</p>
+<p>Define conflict rules before enabling production offline stock-changing workflows.</p>
+<hr />
+<p>[L+ADV] # ADVANCED PLATFORM FLOW</p>
+<p>Create a visual showing how the five capabilities connect:</p>
+<pre><code>                VGS RETAIL OS CORE
+                       |
+         +-------------+-------------+
+         |             |             |
+      POS/Sales     Purchase     Inventory
+         |             |             |
+         +-------------+-------------+
+                       |
+                  BUSINESS EVENTS
+                       |
+        +--------------+--------------+
+        |              |              |
+    Event Store       CQRS          Audit
+        |              |
+        +------+-------+
+               |
+          Read Models
+               |
+    +----------+----------+
+    |          |          |
+  Risk      Workflow     AI
+  Engine     Engine    Assistant
+    |
+ Alerts
+    |
+</code></pre>
+<p>Human Review</p>
+<p>Supplier Network ↔ Core ↔ Omnichannel Channels<br />
+                     ^<br />
+                     |<br />
+                Offline Sync</p>
+<p>The final HTML must render this as a polished SVG/HTML diagram, not ASCII art.</p>
+<hr />
+<p>[L+ADV] # ADVANCED DATA MODEL ADDITIONS</p>
+<p>Extend the conceptual data model with:</p>
+<p>Event<br />
+EventProjection<br />
+EventSubscription<br />
+SyncOperation<br />
+SyncConflict<br />
+Device<br />
+RiskAlert<br />
+RiskCase<br />
+RiskRule<br />
+RiskSignal<br />
+Workflow<br />
+WorkflowRule<br />
+WorkflowExecution<br />
+Channel<br />
+Order<br />
+OrderItem<br />
+InventoryReservation<br />
+SupplierPortalUser</p>
+<p>These are conceptual entities and must not be treated as the final production schema.</p>
+<hr />
+<p>[L+ADV] # ADVANCED API ADDITIONS</p>
+<p>Extend the API architecture conceptually with:</p>
+<p>/api/v1/events<br />
+/api/v1/sync<br />
+/api/v1/sync/conflicts<br />
+/api/v1/risk<br />
+/api/v1/risk/alerts<br />
+/api/v1/risk/cases<br />
+/api/v1/workflows<br />
+/api/v1/workflows/rules<br />
+/api/v1/b2b<br />
+/api/v1/suppliers/portal<br />
+/api/v1/channels<br />
+/api/v1/orders<br />
+/api/v1/reservations</p>
+<p>All endpoints must respect:</p>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Tenant isolation</li>
+<li>Idempotency</li>
+<li>Validation</li>
+<li>Audit</li>
+<li>Correlation IDs</li>
+<li>API versioning</li>
+</ul>
+<hr />
+<p>[L+ADV] # ADVANCED ROADMAP PRIORITY</p>
+<p>The five capabilities must NOT all be built in the first release.</p>
+<p>Recommended order:</p>
+<h2 id="mvp">MVP</h2>
+<ul>
+<li>POS</li>
+<li>Billing</li>
+<li>Sales</li>
+<li>Purchase</li>
+<li>Inventory</li>
+<li>Stores</li>
+<li>Customers</li>
+<li>Suppliers</li>
+<li>Payments</li>
+<li>Basic reports</li>
+<li>Basic audit</li>
+<li>Roles and permissions</li>
+</ul>
+<h2 id="v1-vgs-pilot">V1 / VGS Pilot</h2>
+<ul>
+<li>Strong inventory ledger</li>
+<li>Strong audit</li>
+<li>Selected event-driven operations</li>
+<li>Operational dashboards</li>
+<li>Production hardening</li>
+</ul>
+<h2 id="v2">V2</h2>
+<ul>
+<li>Event Sourcing for selected domains</li>
+<li>CQRS projections</li>
+<li>Offline-first POS</li>
+<li>Sync engine</li>
+</ul>
+<h2 id="v3">V3</h2>
+<ul>
+<li>Fraud/risk engine</li>
+<li>Workflow engine improvements</li>
+<li>Supplier portal</li>
+<li>B2B workflows</li>
+</ul>
+<h2 id="v4">V4</h2>
+<ul>
+<li>Online store</li>
+<li>Omnichannel order management</li>
+<li>Inventory reservations</li>
+<li>WhatsApp integrations where commercially and technically supported</li>
+</ul>
+<h2 id="v5">V5+</h2>
+<ul>
+<li>Advanced AI</li>
+<li>Predictive inventory</li>
+<li>AI procurement</li>
+<li>AI-assisted risk analysis</li>
+<li>Agentic workflows</li>
+<li>Retail ecosystem</li>
+</ul>
+<p>This sequencing is a strategic recommendation, not a fixed commitment.</p>
+<hr />
+<p>[L+ADV] # ADVANCED TESTING REQUIREMENTS</p>
+<p>Add testing for:</p>
+<h3 id="event-architecture">Event Architecture</h3>
+<ul>
+<li>Event ordering</li>
+<li>Event versioning</li>
+<li>Event replay</li>
+<li>Projection rebuild</li>
+<li>Idempotency</li>
+<li>Duplicate event handling</li>
+</ul>
+<h3 id="offline">Offline</h3>
+<ul>
+<li>Internet disconnect during sale</li>
+<li>Reconnect</li>
+<li>Retry</li>
+<li>Duplicate sync</li>
+<li>Conflict detection</li>
+<li>Conflict resolution</li>
+<li>Device recovery</li>
+</ul>
+<h3 id="b2b">B2B</h3>
+<ul>
+<li>Supplier order acceptance</li>
+<li>Partial fulfillment</li>
+<li>Delivery update</li>
+<li>Invoice upload</li>
+<li>Payment status</li>
+</ul>
+<h3 id="omnichannel">Omnichannel</h3>
+<ul>
+<li>Online order</li>
+<li>Inventory reservation</li>
+<li>Cancellation</li>
+<li>Return</li>
+<li>Store fulfillment</li>
+</ul>
+<h3 id="risk">Risk</h3>
+<ul>
+<li>Rule evaluation</li>
+<li>False positive handling</li>
+<li>Risk scoring</li>
+<li>Investigation lifecycle</li>
+</ul>
+<hr />
+<p>[L+ADV] # ADVANCED SECURITY REQUIREMENTS</p>
+<p>Additional controls:</p>
+<ul>
+<li>Strict tenant isolation</li>
+<li>Device registration for offline clients</li>
+<li>Signed/authenticated sync operations</li>
+<li>Idempotency protection</li>
+<li>Event immutability</li>
+<li>Audit preservation</li>
+<li>Supplier portal isolation</li>
+<li>Channel authentication</li>
+<li>Sensitive action approval</li>
+<li>Risk data access controls</li>
+</ul>
+<hr />
+<p>[L+ADV] # ADVANCED INVESTOR STORY</p>
+<p>The five capabilities create a long-term expansion path:</p>
+<p>Internal VGS System<br />
+→ Multi-Store Retail Platform<br />
+→ Event-Driven Retail OS<br />
+→ Offline-First Retail<br />
+→ Supplier Network<br />
+→ Omnichannel Commerce<br />
+→ Risk Intelligence<br />
+→ Workflow Automation<br />
+→ AI-Assisted Retail<br />
+→ Retail Ecosystem</p>
+<p>The investor narrative should remain realistic:</p>
+<p>The company is not claiming that all of these capabilities will exist immediately.</p>
+<p>The strategy is to solve today's VGS problems first and progressively unlock larger<br />
+platform opportunities as real customer validation is achieved.</p>
+<hr />
+<p>[L+ADV] # ADVANCED NON-TECHNICAL EXPLANATIONS</p>
+<p>For the final HTML, add simple explanation boxes:</p>
+<h3 id="event-sourcing">Event Sourcing</h3>
+<p>"The system remembers important business events, not just the final number."</p>
+<h3 id="cqrs_1">CQRS</h3>
+<p>"The system separates changing business data from reading business information."</p>
+<h3 id="b2b-network">B2B Network</h3>
+<p>"Suppliers and retailers can eventually work together through the same platform."</p>
+<h3 id="omnichannel_1">Omnichannel</h3>
+<p>"Customers can buy through physical stores and digital channels while the business<br />
+uses one connected system."</p>
+<h3 id="fraud-detection">Fraud Detection</h3>
+<p>"The system identifies unusual activity and asks authorized people to review it."</p>
+<h3 id="offline-first">Offline-First</h3>
+<p>"The store can continue selected operations even when the internet temporarily fails."</p>
+<hr />
+<p>[L+ADV] # ADVANCED 20-YEAR EVOLUTION</p>
+<p>Update the existing 20-year roadmap to show the five capabilities progressively.</p>
+<p>Years 1–2:<br />
+Core VGS Retail OS</p>
+<p>Years 3–5:<br />
+Multi-tenant SaaS + event-driven foundation</p>
+<p>Years 5–7:<br />
+Offline-first + B2B supplier capabilities</p>
+<p>Years 7–10:<br />
+Omnichannel + risk intelligence + workflow automation</p>
+<p>Years 10–15:<br />
+AI-assisted retail intelligence</p>
+<p>Years 15–20:<br />
+Agentic retail ecosystem / Retail Operating System</p>
+<p>These are strategic horizons, not guaranteed dates.</p>
+<hr />
+<p>[L+ADV] # FINAL ARCHITECTURAL PRINCIPLE</p>
+<p>The system should follow this principle:</p>
+<blockquote>
+<p>Build a simple and reliable retail core first, but create strong architectural<br />
+boundaries so that Event Sourcing, CQRS, Offline Sync, B2B, Omnichannel,<br />
+Fraud Detection, Workflow Automation and AI can be introduced without<br />
+rewriting the entire product.</p>
+</blockquote>
+<p>Do not sacrifice the usability of today's five VGS stores for a hypothetical<br />
+twenty-year architecture.</p>
+<p>Build for evolution, not for architectural fashion.</p>
+<h1 id="28-ai-vision">28. AI VISION</h1>
+<p>Create a dedicated section:</p>
+<h1 id="ai-retail-assistant">AI Retail Assistant</h1>
+<p>Possible future questions:</p>
+<p>"How did my stores perform today?"</p>
+<p>"Which store is doing best?"</p>
+<p>"Which products may run out?"</p>
+<p>"What should I purchase?"</p>
+<p>"Why did sales fall?"</p>
+<p>"Which products are slow moving?"</p>
+<p>"Show unusual discounts."</p>
+<p>"Show unusual returns."</p>
+<p>"Prepare a purchase recommendation."</p>
+<p>"Give me today's business briefing."</p>
+<p>AI should:</p>
+<ul>
+<li>Analyze</li>
+<li>Explain</li>
+<li>Recommend</li>
+<li>Predict</li>
+<li>Automate selected tasks</li>
+</ul>
+<p>But:</p>
+<p>AI must NOT become the source of truth.</p>
+<p>Database remains source of truth.</p>
+<p>Sensitive actions should require permissions and/or approval.</p>
+<hr />
+<h1 id="29-automation-engine">29. AUTOMATION ENGINE</h1>
+<p>Future automation module.</p>
+<p>Examples:</p>
+<p>IF stock &lt; reorder level<br />
+THEN create alert</p>
+<p>IF supplier payment is due<br />
+THEN notify owner</p>
+<p>IF daily sales cross threshold<br />
+THEN send notification</p>
+<p>IF unusual discount occurs<br />
+THEN flag transaction</p>
+<p>IF stock remains stagnant for X days<br />
+THEN identify slow-moving product</p>
+<p>Create a visual rule-engine diagram.</p>
+<hr />
+<h1 id="30-notification-system">30. NOTIFICATION SYSTEM</h1>
+<p>Include:</p>
+<ul>
+<li>In-app</li>
+<li>Email</li>
+<li>WhatsApp where supported/authorized</li>
+<li>SMS where needed</li>
+<li>Push notifications in future</li>
+</ul>
+<p>Examples:</p>
+<p>Low stock<br />
+Payment due<br />
+Transfer pending<br />
+Purchase received<br />
+Daily report<br />
+Suspicious activity<br />
+Subscription expiry</p>
+<hr />
+<h1 id="31-saas-business-model">31. SAAS BUSINESS MODEL</h1>
+<p>Explain how VGS Retail OS becomes a SaaS.</p>
+<p>Flow:</p>
+<p>Customer Signup<br />
+↓<br />
+Create Business<br />
+↓<br />
+Add Stores<br />
+↓<br />
+Add Users<br />
+↓<br />
+Configure Products<br />
+↓<br />
+Choose Plan<br />
+↓<br />
+Subscription<br />
+↓<br />
+Start Using</p>
+<p>Potential plans:</p>
+<p>Starter<br />
+Business<br />
+Advanced</p>
+<p>Do not present fixed pricing as final.</p>
+<p>Explain pricing should be validated through real customer research.</p>
+<hr />
+<h1 id="32-target-customers">32. TARGET CUSTOMERS</h1>
+<p>Initial target:</p>
+<p>Small and medium retail businesses.</p>
+<p>Possible verticals:</p>
+<ul>
+<li>Garments</li>
+<li>Blankets</li>
+<li>Home furnishing</li>
+<li>Mattress</li>
+<li>Footwear</li>
+<li>Furniture</li>
+<li>Electronics</li>
+<li>Hardware</li>
+<li>General retail</li>
+<li>Cosmetics</li>
+</ul>
+<p>Do not try to serve every industry in version 1.</p>
+<hr />
+<h1 id="33-competitive-positioning">33. COMPETITIVE POSITIONING</h1>
+<p>Do NOT make unsupported claims about being better than named competitors.</p>
+<p>Instead explain differentiation areas:</p>
+<ul>
+<li>Multi-store simplicity</li>
+<li>Strong inventory visibility</li>
+<li>Real business dashboard</li>
+<li>Store transfer</li>
+<li>AI-assisted insights</li>
+<li>Modular architecture</li>
+<li>Affordable SaaS</li>
+<li>Easy onboarding</li>
+<li>Retail-first workflows</li>
+<li>Future extensibility</li>
+</ul>
+<p>Include a "Why customers might choose us" section.</p>
+<hr />
+<h1 id="34-product-principles">34. PRODUCT PRINCIPLES</h1>
+<p>Create 10 principles:</p>
+<ol>
+<li>Business first</li>
+<li>Simple UX</li>
+<li>Reliable transactions</li>
+<li>Stock must be traceable</li>
+<li>Secure by default</li>
+<li>Multi-tenant from the beginning</li>
+<li>API-first thinking</li>
+<li>AI with guardrails</li>
+<li>Automate carefully</li>
+<li>Build for evolution</li>
+</ol>
+<hr />
+<h1 id="35-development-roadmap">35. DEVELOPMENT ROADMAP</h1>
+<p>Create a visual roadmap.</p>
+<h2 id="phase-0">Phase 0</h2>
+<p>Discovery</p>
+<h2 id="phase-1">Phase 1</h2>
+<p>Foundation</p>
+<h2 id="phase-2">Phase 2</h2>
+<p>Master Data</p>
+<h2 id="phase-3">Phase 3</h2>
+<p>Purchase + Inventory</p>
+<h2 id="phase-4">Phase 4</h2>
+<p>POS + Billing</p>
+<h2 id="phase-5">Phase 5</h2>
+<p>Customers + Suppliers + Expenses</p>
+<h2 id="phase-6">Phase 6</h2>
+<p>Reports + Dashboard</p>
+<h2 id="phase-7">Phase 7</h2>
+<p>VGS Pilot</p>
+<h2 id="phase-8">Phase 8</h2>
+<p>Hardening</p>
+<h2 id="phase-9">Phase 9</h2>
+<p>SaaS</p>
+<h2 id="phase-10">Phase 10</h2>
+<p>AI + Automation</p>
+<p>Explain deliverables and success criteria for every phase.</p>
+<hr />
+<h1 id="36-02-year-roadmap">36. 0–2 YEAR ROADMAP</h1>
+<p>Create a visual timeline.</p>
+<p>0–3 months<br />
+Foundation</p>
+<p>3–6 months<br />
+Core Operations</p>
+<p>6–9 months<br />
+POS</p>
+<p>9–12 months<br />
+VGS Pilot</p>
+<p>Year 2<br />
+SaaS Launch</p>
+<p>Do not promise unrealistic timelines.</p>
+<p>State that timelines depend on scope, team size and development quality.</p>
+<hr />
+<h1 id="37-35-year-roadmap">37. 3–5 YEAR ROADMAP</h1>
+<p>Focus on:</p>
+<ul>
+<li>More customers</li>
+<li>Better onboarding</li>
+<li>Advanced reporting</li>
+<li>Integrations</li>
+<li>Automation</li>
+<li>Event Sourcing &amp; CQRS</li>
+<li>Offline-First Sync</li>
+<li>B2B Network &amp; Supply Chain</li>
+<li>Omnichannel Commerce</li>
+<li>Fraud Detection &amp; Risk Engine</li>
+<li>AI analytics</li>
+<li>Demand forecasting</li>
+<li>Better mobile support</li>
+</ul>
+<hr />
+<h1 id="38-610-year-roadmap">38. 6–10 YEAR ROADMAP</h1>
+<p>Focus on:</p>
+<ul>
+<li>Connected retail</li>
+<li>Mobile operations</li>
+<li>AI recommendations</li>
+<li>Online/offline commerce</li>
+<li>API ecosystem</li>
+<li>Integrations</li>
+<li>Advanced analytics</li>
+<li>Larger multi-store customers</li>
+</ul>
+<hr />
+<h1 id="39-1120-year-vision">39. 11–20 YEAR VISION</h1>
+<p>This section must be strategic rather than fantasy.</p>
+<p>Explain that technology will change.</p>
+<p>The durable vision is:</p>
+<h2 id="years-1112">Years 11–12</h2>
+<p>Platform maturity</p>
+<h2 id="years-1314">Years 13–14</h2>
+<p>AI-assisted operations</p>
+<h2 id="years-1516">Years 15–16</h2>
+<p>Retail ecosystem</p>
+<h2 id="years-1718">Years 17–18</h2>
+<p>Predictive retail</p>
+<h2 id="years-1920">Years 19–20</h2>
+<p>Retail Operating System</p>
+<p>Possible future capabilities:</p>
+<ul>
+<li>AI business agents</li>
+<li>Predictive inventory</li>
+<li>Demand forecasting</li>
+<li>Intelligent procurement</li>
+<li>Pricing recommendations</li>
+<li>Customer intelligence</li>
+<li>Autonomous reporting</li>
+<li>Connected devices</li>
+<li>Retail APIs</li>
+<li>Partner ecosystem</li>
+<li>Multi-country readiness</li>
+</ul>
+<p>Always explain:</p>
+<blockquote>
+<p>These are long-term possibilities, not guaranteed features.</p>
+</blockquote>
+<hr />
+<h1 id="40-business-model-evolution">40. BUSINESS MODEL EVOLUTION</h1>
+<p>Explain:</p>
+<p>Stage 1:<br />
+Internal VGS software</p>
+<p>Stage 2:<br />
+VGS pilot</p>
+<p>Stage 3:<br />
+First external customer</p>
+<p>Stage 4:<br />
+Subscription SaaS</p>
+<p>Stage 5:<br />
+Advanced plans</p>
+<p>Stage 6:<br />
+AI/automation premium features</p>
+<p>Stage 7:<br />
+API / ecosystem revenue possibilities</p>
+<hr />
+<h1 id="41-success-metrics">41. SUCCESS METRICS</h1>
+<p>Create a professional KPI section.</p>
+<p>Include:</p>
+<ul>
+<li>Billing speed</li>
+<li>Stock accuracy</li>
+<li>Daily active users</li>
+<li>Store adoption</li>
+<li>Report generation time</li>
+<li>Customer retention</li>
+<li>Monthly recurring revenue</li>
+<li>Churn</li>
+<li>Support tickets</li>
+<li>Feature adoption</li>
+<li>Inventory accuracy</li>
+<li>SaaS onboarding time</li>
+</ul>
+<p>Explain why each metric matters.</p>
+<hr />
+<h1 id="42-risks">42. RISKS</h1>
+<p>Create a realistic risk section.</p>
+<p>Include:</p>
+<ul>
+<li>Scope creep</li>
+<li>Poor data quality</li>
+<li>Incorrect inventory logic</li>
+<li>Security vulnerabilities</li>
+<li>Tax/compliance mistakes</li>
+<li>AI hallucinations</li>
+<li>Offline sync conflicts</li>
+<li>User resistance</li>
+<li>Too many features too early</li>
+<li>SaaS infrastructure costs</li>
+<li>Customer support burden</li>
+</ul>
+<p>For every risk give:</p>
+<p>Risk<br />
+Impact<br />
+Mitigation</p>
+<hr />
+<h1 id="43-testing-strategy">43. TESTING STRATEGY</h1>
+<p>Include:</p>
+<p>Unit Tests<br />
+Integration Tests<br />
+API Tests<br />
+UI Tests<br />
+End-to-End Tests<br />
+Security Tests<br />
+Performance Tests<br />
+Database Tests</p>
+<p>Critical workflows:</p>
+<ul>
+<li>Sale</li>
+<li>Return</li>
+<li>Purchase</li>
+<li>Stock transfer</li>
+<li>Payment</li>
+<li>Tenant isolation</li>
+<li>Permissions</li>
+</ul>
+<p>Explain that these must be tested before production.</p>
+<hr />
+<h1 id="44-observability">44. OBSERVABILITY</h1>
+<p>Future production system should include:</p>
+<ul>
+<li>Logs</li>
+<li>Metrics</li>
+<li>Error tracking</li>
+<li>Health checks</li>
+<li>Database monitoring</li>
+<li>API latency</li>
+<li>Background job monitoring</li>
+<li>Audit logs</li>
+<li>Alerts</li>
+</ul>
+<p>Explain this in simple language.</p>
+<hr />
+<h1 id="45-deployment">45. DEPLOYMENT</h1>
+<p>Explain:</p>
+<p>Developer Machine<br />
+↓<br />
+Git<br />
+↓<br />
+CI/CD<br />
+↓<br />
+Test Environment<br />
+↓<br />
+Staging<br />
+↓<br />
+Production</p>
+<p>Show:</p>
+<p>Angular<br />
+ASP.NET Core<br />
+PostgreSQL<br />
+Redis<br />
+Background Workers<br />
+File Storage</p>
+<p>Create a visual deployment architecture.</p>
+<hr />
+<h1 id="46-document-design-requirements">46. DOCUMENT DESIGN REQUIREMENTS</h1>
+<p>This is extremely important.</p>
+<p>Do NOT create a boring document.</p>
+<p>The HTML must look like a professional SaaS product strategy document.</p>
+<p>Use:</p>
+<ul>
+<li>Modern dashboard-style design</li>
+<li>White/light background</li>
+<li>Navy + blue + teal accent colors</li>
+<li>Large section headers</li>
+<li>Cards</li>
+<li>Badges</li>
+<li>Timelines</li>
+<li>Architecture diagrams</li>
+<li>Flow diagrams</li>
+<li>Tables</li>
+<li>KPI cards</li>
+<li>Feature cards</li>
+<li>Callout boxes</li>
+<li>Sticky sidebar navigation</li>
+<li>Table of contents</li>
+<li>Progress indicator</li>
+<li>Responsive layout</li>
+<li>Print-friendly layout</li>
+<li>A4 PDF print CSS</li>
+</ul>
+<p>Use:</p>
+<p>HTML5<br />
+CSS3<br />
+Vanilla JavaScript</p>
+<p>Do NOT require a complex frontend framework just to render the document.</p>
+<p>Prefer:</p>
+<ul>
+<li>SVG</li>
+<li>CSS</li>
+<li>HTML</li>
+<li>JavaScript</li>
+</ul>
+<p>for diagrams.</p>
+<hr />
+<h1 id="47-visual-design">47. VISUAL DESIGN</h1>
+<p>Create:</p>
+<h2 id="cover">Cover</h2>
+<p>Large:</p>
+<p>VGS RETAIL OS</p>
+<p>Subtitle:</p>
+<p>"Complete Retail Business Operating System"</p>
+<p>Include:</p>
+<ul>
+<li>5-store visual</li>
+<li>dashboard illustration</li>
+<li>future AI concept</li>
+<li>clean professional layout</li>
+</ul>
+<hr />
+<h1 id="48-sidebar-navigation">48. SIDEBAR NAVIGATION</h1>
+<p>Create a sticky left sidebar.</p>
+<p>Sections:</p>
+<p>01 Executive Summary<br />
+02 Business Problem<br />
+03 Product Vision<br />
+04 Users<br />
+05 Feature Map<br />
+06 POS<br />
+07 Inventory<br />
+08 Purchase<br />
+09 Customers<br />
+10 Suppliers<br />
+11 Expenses<br />
+12 Dashboard<br />
+13 Reports<br />
+14 Multi-Store<br />
+15 Multi-Tenant<br />
+16 Technology<br />
+17 Architecture<br />
+18 Security<br />
+19 Offline<br />
+20 AI<br />
+21 Automation<br />
+22 SaaS<br />
+23 Roadmap<br />
+24 20-Year Vision<br />
+25 Risks<br />
+26 Testing<br />
+27 Success Metrics<br />
+28 Glossary</p>
+<p>Clicking navigation items should smoothly scroll to sections.</p>
+<hr />
+<h1 id="49-visual-requirement">49. VISUAL REQUIREMENT</h1>
+<p>Every major section should contain at least one useful visual element where appropriate.</p>
+<p>Examples:</p>
+<p>Architecture → architecture diagram</p>
+<p>POS → POS mockup</p>
+<p>Inventory → stock flow</p>
+<p>Multi-tenant → tenant diagram</p>
+<p>Roadmap → timeline</p>
+<p>AI → AI flow</p>
+<p>SaaS → customer onboarding flow</p>
+<p>Dashboard → dashboard mockup</p>
+<p>Do NOT add decorative visuals that do not explain anything.</p>
+<hr />
+<h1 id="50-responsive-design">50. RESPONSIVE DESIGN</h1>
+<p>The document must work on:</p>
+<ul>
+<li>Mac</li>
+<li>Windows</li>
+<li>Desktop</li>
+<li>Tablet</li>
+<li>Mobile</li>
+</ul>
+<p>Use responsive CSS.</p>
+<hr />
+<h1 id="51-print-pdf">51. PRINT / PDF</h1>
+<p>The HTML must have excellent print support.</p>
+<p>Add:</p>
+<p>@media print</p>
+<p>Rules should:</p>
+<ul>
+<li>Remove sidebar</li>
+<li>Remove buttons</li>
+<li>Preserve colors where possible</li>
+<li>Prevent tables from breaking badly</li>
+<li>Avoid cutting diagrams</li>
+<li>Add page breaks intelligently</li>
+<li>Maintain A4 layout</li>
+</ul>
+<p>The document should be easy to export:</p>
+<p>Browser<br />
+→ Print<br />
+→ Save as PDF</p>
+<hr />
+<h1 id="52-accessibility">52. ACCESSIBILITY</h1>
+<p>Use:</p>
+<ul>
+<li>Semantic HTML</li>
+<li>Proper headings</li>
+<li>Accessible contrast</li>
+<li>ARIA labels where appropriate</li>
+<li>Keyboard navigation</li>
+<li>Meaningful alt text for any images</li>
+</ul>
+<hr />
+<h1 id="53-document-structure">53. DOCUMENT STRUCTURE</h1>
+<p>Use this exact high-level structure:</p>
+<ol>
+<li>Cover</li>
+<li>Table of Contents</li>
+<li>Executive Summary</li>
+<li>Business Problem</li>
+<li>Product Vision</li>
+<li>Target Users</li>
+<li>Product Principles</li>
+<li>Complete Feature Map</li>
+<li>POS &amp; Billing</li>
+<li>Sales</li>
+<li>Purchase</li>
+<li>Inventory</li>
+<li>Store Transfer</li>
+<li>Customers</li>
+<li>Suppliers</li>
+<li>Expenses</li>
+<li>Payments</li>
+<li>Dashboard</li>
+<li>Reports</li>
+<li>Roles &amp; Permissions</li>
+<li>Multi-Store</li>
+<li>Multi-Tenant SaaS</li>
+<li>Technology Stack</li>
+<li>System Architecture</li>
+<li>Frontend Architecture</li>
+<li>Backend Architecture</li>
+<li>Database Architecture</li>
+<li>API Architecture</li>
+<li>Security</li>
+<li>Offline Strategy</li>
+<li>Notifications</li>
+<li>Automation Engine</li>
+<li>AI Vision</li>
+<li>AI Development Strategy</li>
+<li>Testing Strategy</li>
+<li>Deployment</li>
+<li>SaaS Business Model</li>
+<li>Target Market</li>
+<li>Competitive Positioning</li>
+<li>MVP</li>
+<li>Development Roadmap</li>
+<li>0–2 Year Roadmap</li>
+<li>3–5 Year Roadmap</li>
+<li>6–10 Year Roadmap</li>
+<li>11–20 Year Vision</li>
+<li>Business Model Evolution</li>
+<li>Success Metrics</li>
+<li>Risks &amp; Mitigation</li>
+<li>Future Possibilities</li>
+<li>Glossary</li>
+<li>Final Vision</li>
+</ol>
+<hr />
+<h1 id="54-content-quality-rules">54. CONTENT QUALITY RULES</h1>
+<p>Follow these rules:</p>
+<ol>
+<li>Do not make unsupported claims.</li>
+<li>Do not invent market statistics.</li>
+<li>Do not claim compliance without verification.</li>
+<li>Do not present future features as guaranteed.</li>
+<li>Clearly label examples as examples.</li>
+<li>Explain technical terms in simple language.</li>
+<li>Avoid unnecessary technical jargon.</li>
+<li>Keep business logic realistic.</li>
+<li>Think about real retail workflows.</li>
+<li>Think about edge cases.</li>
+<li>Think about data integrity.</li>
+<li>Think about security.</li>
+<li>Think about scalability.</li>
+<li>Think about 20-year evolution.</li>
+<li>Do not over-engineer MVP.</li>
+</ol>
+<hr />
+<h1 id="55-final-output">55. FINAL OUTPUT</h1>
+<p>Create:</p>
+<h2 id="docsvgs-retail-os-product-blueprintmd">/docs/vgs-retail-os-product-blueprint.md</h2>
+<p>This Markdown file should contain the complete source content.</p>
+<p>Also create:</p>
+<h2 id="docsvgs-retail-os-product-blueprinthtml">/docs/vgs-retail-os-product-blueprint.html</h2>
+<p>The HTML must be generated from the Markdown content or use the same structured content.</p>
+<p>The HTML should be fully self-contained.</p>
+<p>Prefer:</p>
+<ul>
+<li>No external image dependencies</li>
+<li>No external CSS dependency</li>
+<li>No external JS dependency</li>
+</ul>
+<p>All major diagrams should be inline SVG or CSS.</p>
+<hr />
+<h1 id="56-final-quality-check">56. FINAL QUALITY CHECK</h1>
+<p>Before finishing, verify:</p>
+<h3 id="business">Business</h3>
+<ul>
+<li>Can a non-technical person understand the project?</li>
+<li>Is the business problem clear?</li>
+<li>Is the SaaS vision clear?</li>
+</ul>
+<h3 id="product">Product</h3>
+<ul>
+<li>Are all major modules explained?</li>
+<li>Are workflows clear?</li>
+<li>Are dependencies clear?</li>
+</ul>
+<h3 id="technical">Technical</h3>
+<ul>
+<li>Is the tech stack clearly explained?</li>
+<li>Is architecture clear?</li>
+<li>Is multi-tenancy clear?</li>
+<li>Is security covered?</li>
+<li>Is database architecture covered?</li>
+</ul>
+<h3 id="ai">AI</h3>
+<ul>
+<li>Is AI development strategy explained?</li>
+<li>Is AI product strategy explained?</li>
+<li>Are AI guardrails explained?</li>
+</ul>
+<h3 id="future">Future</h3>
+<ul>
+<li>Are 0–2 years covered?</li>
+<li>Are 3–5 years covered?</li>
+<li>Are 6–10 years covered?</li>
+<li>Are 11–20 years covered?</li>
+</ul>
+<h3 id="visual">Visual</h3>
+<ul>
+<li>Does every important concept have an appropriate visual?</li>
+<li>Are diagrams readable?</li>
+<li>Is the dashboard visually understandable?</li>
+<li>Is the roadmap visual?</li>
+<li>Is the HTML professional?</li>
+</ul>
+<h3 id="pdf">PDF</h3>
+<ul>
+<li>Does print preview look good?</li>
+<li>Are page breaks sensible?</li>
+<li>Are tables readable?</li>
+<li>Are diagrams not cut?</li>
+<li>Is the cover professional?</li>
+</ul>
+<hr />
+<h1 id="57-most-important-instruction">57. MOST IMPORTANT INSTRUCTION</h1>
+<p>Do not rush.</p>
+<p>First think through the complete product.</p>
+<p>Then create the information architecture.</p>
+<p>Then write the content.</p>
+<p>Then design the HTML.</p>
+<p>Then create diagrams.</p>
+<p>Then add responsive styling.</p>
+<p>Then add print styling.</p>
+<p>Then perform a final quality review.</p>
+<p>The final result should feel like a document prepared by:</p>
+<blockquote>
+<p>a professional SaaS product company + enterprise architect + product strategist</p>
+</blockquote>
+<p>and NOT like a simple AI-generated README.</p>
+<p>The document should be something the founder can confidently show to:</p>
+<ul>
+<li>Family</li>
+<li>Business partners</li>
+<li>Employees</li>
+<li>Developers</li>
+<li>Investors</li>
+<li>Potential customers</li>
+<li>Future technical team</li>
+</ul>
+<p>while also being detailed enough to serve as the <strong>master product reference document for future AI coding agents.</strong></p>
+        <details>
+          <summary>Verbatim Source (All Original Points)</summary>
+          <pre class="verbatim"># MASTER PROMPT — VGS RETAIL OS
+## Create a Professional Product Vision + Technical Blueprint + 20-Year Roadmap HTML Document
+
+You are acting as a combination of:
+
+- Senior Product Manager
+- Enterprise Solution Architect
+- SaaS Product Strategist
+- Retail Domain Expert
+- UX/UI Designer
+- Technical Writer
+- Business Analyst
+- AI Product Architect
+
+Your job is to create a **complete, professional, visually impressive HTML-based product document** for a product called:
+
+# VGS RETAIL OS
+
+The final document must be understandable to:
+
+1. A non-technical business owner
+2. A family member or business partner
+3. An investor
+4. A product manager
+5. A software developer
+6. An AI coding agent such as Claude Code / GitHub Copilot
+
+The document must explain both:
+
+- WHAT the product is
+- HOW it will be built
+- WHY it is being built
+- HOW it will evolve over 20 years
+
+Do NOT create a short overview.
+
+Create a serious **Product Vision + Business Blueprint + Technical Architecture + Feature Specification + Development Roadmap**.
+
+---
+
+# 1. CONTEXT
+
+The founder currently operates:
+
+## VGS Group
+
+VGS currently has:
+
+- 5 physical retail stores
+
+The real business problem is that as the number of stores increases, it becomes difficult to manually manage:
+
+- Sales
+- Billing
+- Purchase
+- Inventory
+- Store-to-store stock transfer
+- Customers
+- Suppliers
+- Payments
+- Expenses
+- Employees
+- Reports
+- Profit visibility
+- Stock availability
+- Business performance
+
+The founder wants to build an internal system for VGS first.
+
+However, this must NOT be a hard-coded VGS-only application.
+
+The long-term goal is:
+
+&gt; Build a professional retail management SaaS platform that can first run VGS Group and later be sold to other retail businesses.
+
+Therefore:
+
+## VGS is the first real customer and pilot.
+
+The software should eventually support:
+
+- 1 store
+- 5 stores
+- 20 stores
+- 100+ stores
+
+and multiple independent businesses.
+
+---
+
+# 2. PRODUCT NAME
+
+Use:
+
+# VGS Retail OS
+
+Suggested positioning:
+
+&gt; &quot;Run Your Entire Retail Business in One Place.&quot;
+
+Alternative description:
+
+&gt; &quot;A complete digital operating system for modern retail businesses.&quot;
+
+Do not overuse marketing language.
+
+The document should remain professional and realistic.
+
+---
+
+# 3. CORE PRODUCT IDEA
+
+Explain the product in extremely simple language.
+
+Use this analogy:
+
+&gt; VGS Retail OS is the digital control room of a retail business.
+
+The owner should be able to open one dashboard and understand:
+
+- How much did I sell today?
+- Which store performed best?
+- Which products are selling?
+- Which products are low in stock?
+- What did I purchase?
+- How much do I owe suppliers?
+- How much customers owe me?
+- What expenses happened?
+- What is my business performance?
+- What needs my attention today?
+
+The system should connect all these activities.
+
+---
+
+
+### Advanced platform direction
+
+In addition to the original retail-management capabilities, the long-term platform
+will be designed to support five strategic capabilities:
+
+- Event Sourcing &amp; CQRS
+- B2B Network &amp; Supply Chain
+- Omnichannel Commerce
+- Fraud Detection &amp; Risk Engine
+- True Offline-First Sync
+
+These are intentionally phased after the core retail workflows are stable.
+
+
+# 4. IMPORTANT PRODUCT PRINCIPLE
+
+Do NOT position this as:
+
+&gt; &quot;Just another billing software.&quot;
+
+It should be positioned as:
+
+# Retail Business Operating System
+
+The product should eventually combine:
+
+- POS
+- Billing
+- Inventory
+- Purchase
+- Sales
+- Customer Management
+- Supplier Management
+- Expenses
+- Payments
+- Store Management
+- Employee Management
+- Reporting
+- Analytics
+- Automation
+- Event Sourcing &amp; CQRS
+- Offline-First Sync
+- B2B Network &amp; Supply Chain
+- Omnichannel Commerce
+- Fraud Detection &amp; Risk Engine
+- AI
+
+---
+
+# 5. DOCUMENT GOAL
+
+Create a complete document that answers these questions:
+
+### Business questions
+
+- What problem are we solving?
+- Who has this problem?
+- Why does it matter?
+- Why will customers pay for it?
+- What makes the product different?
+- Who are the target customers?
+- What is the business model?
+- How does VGS become the first pilot?
+- How can this become SaaS?
+
+### Product questions
+
+- What modules exist?
+- What does every module do?
+- Who uses each module?
+- What is the workflow?
+- How do modules interact?
+
+### Technical questions
+
+- Which technology will be used?
+- Why?
+- What architecture will be used?
+- How will multi-tenancy work?
+- How will security work?
+- How will data be stored?
+- How will APIs work?
+- How will the system scale?
+
+### Future questions
+
+- What happens after MVP?
+- What happens after 1 year?
+- 3 years?
+- 5 years?
+- 10 years?
+- 20 years?
+- Where does AI fit?
+- Where does automation fit?
+- How can this become a large retail platform?
+
+---
+
+# 6. TECHNOLOGY STACK
+
+The proposed technology stack is:
+
+## Frontend
+
+Angular
+
+## Backend
+
+ASP.NET Core Web API
+
+## Database
+
+PostgreSQL
+
+## Cache
+
+Redis
+
+## Background Processing
+
+.NET Worker Services / Hangfire-style job processing
+
+## Containerization
+
+Docker
+
+## Source Control
+
+Git + GitHub
+
+## AI Development
+
+Claude Code + GitHub Copilot
+
+## Future Mobile
+
+PWA initially
+
+Android / iOS later if required
+
+## Cloud
+
+Architecture should remain cloud-ready.
+
+Possible future infrastructure:
+
+- AWS
+- Azure
+- Other cloud providers
+
+Do not hard-code the product to one cloud provider.
+
+---
+
+# 7. ARCHITECTURE PRINCIPLE
+
+Start with:
+
+# Modular Monolith
+
+Do NOT start with microservices.
+
+Explain why:
+
+- Easier development
+- Easier deployment
+- Easier debugging
+- Lower infrastructure complexity
+- Suitable for MVP and early SaaS
+- Clear module boundaries
+- Can evolve into distributed services later if required
+
+The architecture must still have strong domain boundaries.
+
+---
+
+# 8. HIGH-LEVEL ARCHITECTURE
+
+Create a beautiful visual architecture diagram.
+
+Show:
+
+User
+↓
+Angular / PWA
+↓
+ASP.NET Core API
+↓
+Business Modules
+↓
+PostgreSQL
+
+Also show:
+
+Redis
+Background Jobs
+File Storage
+Notifications
+External Integrations
+AI Layer
+
+Create an attractive architecture diagram using HTML/CSS/SVG.
+
+Do NOT use ASCII art.
+
+---
+
+# 9. MULTI-TENANT ARCHITECTURE
+
+This is extremely important.
+
+Explain:
+
+One platform can serve many businesses.
+
+Example:
+
+Tenant 1:
+VGS Group
+- Store 1
+- Store 2
+- Store 3
+- Store 4
+- Store 5
+
+Tenant 2:
+Sharma Garments
+- Store 1
+- Store 2
+
+Tenant 3:
+Gupta Home Store
+- Store 1
+
+Each tenant must have isolated data.
+
+Explain:
+
+- Tenant
+- Organization
+- Store
+- User
+- Role
+- Permission
+
+Create a visual diagram.
+
+---
+
+# 10. MAIN MODULES
+
+Create a dedicated section for every module.
+
+At minimum include:
+
+1. Authentication
+2. Tenant Management
+3. Organization
+4. Store Management
+5. User Management
+6. Roles &amp; Permissions
+7. Product Management
+8. Category Management
+9. Brand Management
+10. Unit Management
+11. Tax Configuration
+12. Customer Management
+13. Supplier Management
+14. Purchase
+15. Purchase Return
+16. Inventory
+17. Stock Ledger
+18. Stock Transfer
+19. Stock Adjustment
+20. POS
+21. Sales
+22. Billing
+23. Invoice
+24. Payment
+25. Sales Return
+26. Expenses
+27. Receivables
+28. Payables
+29. Notifications
+30. Dashboard
+31. Reports
+32. Audit Logs
+33. Settings
+34. Subscription / SaaS
+35. Integrations
+36. Automation
+37. AI Insights
+
+For every module explain:
+
+- Purpose
+- Who uses it
+- Main screens
+- Main features
+- Inputs
+- Outputs
+- Business rules
+- Dependencies
+- Future improvements
+
+---
+
+# 11. POS / BILLING SPECIFICATION
+
+Create a detailed POS section.
+
+Explain the complete flow:
+
+Customer enters store
+↓
+Cashier scans/searches product
+↓
+Product added to cart
+↓
+Quantity selected
+↓
+Discount
+↓
+Tax
+↓
+Customer selected if required
+↓
+Payment method
+↓
+Sale completed
+↓
+Invoice generated
+↓
+Inventory updated
+↓
+Payment recorded
+↓
+Receipt printed/shared
+
+Include:
+
+- Barcode
+- SKU
+- Product search
+- Quantity
+- Discount
+- Tax
+- Multiple payment methods
+- Cash
+- UPI
+- Card
+- Credit
+- Invoice
+- Print
+- PDF
+- Share
+- Reprint
+- Hold bill
+- Resume bill
+- Sales return
+- Cancellation/void
+- Permission controls
+
+Create a beautiful POS UI mockup using HTML/CSS.
+
+---
+
+# 12. INVENTORY SPECIFICATION
+
+Explain inventory as the &quot;stock truth&quot;.
+
+Show:
+
+Purchase
+↓
+Stock In
+↓
+Store Inventory
+↓
+Sale
+↓
+Stock Out
+
+Also:
+
+Store A
+↓
+Transfer
+↓
+Store B
+
+Include:
+
+- Stock balance
+- Stock ledger
+- Stock movement
+- Stock valuation
+- Low stock
+- Reorder level
+- Stock adjustment
+- Damaged stock
+- Expired stock where applicable
+- Transfer
+- Return
+- Inventory history
+
+Every stock-changing operation must create an auditable transaction.
+
+---
+
+# 13. PURCHASE MODULE
+
+Explain:
+
+Supplier
+↓
+Purchase
+↓
+Purchase Items
+↓
+Receive Goods
+↓
+Inventory Increase
+↓
+Supplier Payable
+↓
+Payment
+
+Include:
+
+- Purchase order
+- Purchase receipt
+- Purchase invoice
+- Supplier
+- Quantity
+- Cost price
+- Tax
+- Discount
+- Payment
+- Outstanding
+- Purchase return
+
+---
+
+# 14. STORE TRANSFER
+
+Explain a real example:
+
+Store 2 has 50 blankets.
+
+Store 5 needs 20.
+
+Manager creates:
+
+Transfer Request
+↓
+Approval (if enabled)
+↓
+Dispatch
+↓
+In Transit
+↓
+Receive
+↓
+Stock updated
+
+Show before/after stock.
+
+---
+
+# 15. CUSTOMER MANAGEMENT
+
+Include:
+
+- Customer profile
+- Mobile
+- Address
+- Purchase history
+- Outstanding balance
+- Credit
+- Returns
+- Communication preferences
+- Future loyalty system
+
+Explain future CRM capabilities.
+
+---
+
+# 16. SUPPLIER MANAGEMENT
+
+Include:
+
+- Supplier profile
+- Contact
+- GST information where applicable
+- Purchase history
+- Payment history
+- Outstanding payable
+- Purchase price history
+- Supplier performance
+
+---
+
+# 17. EXPENSE MANAGEMENT
+
+Include:
+
+- Rent
+- Electricity
+- Salary
+- Transport
+- Packaging
+- Repairs
+- Internet
+- Miscellaneous
+
+Allow:
+
+- Store-wise expenses
+- Category-wise expenses
+- Date-wise expenses
+- Payment method
+- Attachments
+- Approval workflow in future
+
+---
+
+# 18. DASHBOARD
+
+Create a professional visual dashboard mockup.
+
+Show:
+
+Today&#x27;s Sales
+Today&#x27;s Purchase
+Expenses
+Outstanding
+Profit/Gross Margin view
+Store Performance
+Top Products
+Low Stock
+Pending Transfers
+Supplier Payables
+Customer Receivables
+
+Include charts.
+
+Do NOT make fake financial claims.
+
+Use clearly labelled example/demo numbers.
+
+---
+
+# 19. REPORTS
+
+Create categories:
+
+## Sales Reports
+
+- Daily
+- Weekly
+- Monthly
+- Store-wise
+- Product-wise
+- Employee-wise
+- Payment-wise
+
+## Purchase Reports
+
+- Supplier-wise
+- Product-wise
+- Store-wise
+- Date-wise
+
+## Inventory Reports
+
+- Current Stock
+- Stock Movement
+- Stock Valuation
+- Low Stock
+- Slow Moving
+- Fast Moving
+- Dead Stock
+
+## Financial / Operational Reports
+
+- Expenses
+- Receivables
+- Payables
+- Gross Profit
+- Store Comparison
+
+Explain that statutory accounting/GST capabilities should be validated against current requirements before production use.
+
+---
+
+# 20. USER ROLES
+
+Create a permissions matrix.
+
+Roles:
+
+- Super Admin
+- Business Owner
+- Store Manager
+- Cashier
+- Inventory Manager
+- Purchase Manager
+- Accountant
+- Auditor
+- Support Admin
+
+Show what each role can access.
+
+---
+
+# 21. DATABASE DESIGN
+
+Create a conceptual ER diagram using SVG.
+
+Core entities:
+
+Tenant
+Organization
+Store
+User
+Role
+Permission
+
+Product
+Category
+Brand
+Unit
+TaxCategory
+
+Customer
+Supplier
+
+Purchase
+PurchaseItem
+PurchasePayment
+
+Sale
+SaleItem
+SalePayment
+
+Invoice
+
+InventoryTransaction
+StockTransfer
+StockTransferItem
+
+Expense
+
+Return
+ReturnItem
+
+Notification
+
+AuditLog
+
+Subscription
+SubscriptionPlan
+
+Explain relationships.
+
+Do NOT pretend this is the final production schema.
+
+Call it:
+
+&quot;Conceptual Data Model&quot;
+
+---
+
+# 22. IMPORTANT DATA PRINCIPLE
+
+Explain this clearly:
+
+Never directly change stock without recording why.
+
+Example:
+
+Purchase +100
+Sale -3
+Transfer Out -20
+Transfer In +20
+Return +1
+Adjustment -2
+
+The system must be able to answer:
+
+&gt; &quot;Why is current stock 96?&quot;
+
+This is critical.
+
+---
+
+# 23. API ARCHITECTURE
+
+Explain REST API structure.
+
+Example:
+
+/api/v1/auth
+
+/api/v1/tenants
+
+/api/v1/stores
+
+/api/v1/products
+
+/api/v1/customers
+
+/api/v1/suppliers
+
+/api/v1/purchases
+
+/api/v1/inventory
+
+/api/v1/transfers
+
+/api/v1/sales
+
+/api/v1/pos
+
+/api/v1/payments
+
+/api/v1/expenses
+
+/api/v1/reports
+
+/api/v1/notifications
+
+/api/v1/subscriptions
+
+Explain:
+
+- Authentication
+- Authorization
+- Validation
+- Error handling
+- Pagination
+- Filtering
+- Sorting
+- Audit
+- API versioning
+
+---
+
+# 24. FRONTEND STRUCTURE
+
+Explain Angular architecture.
+
+Show:
+
+Application Shell
+↓
+Core
+↓
+Shared
+↓
+Feature Modules
+
+Possible features:
+
+- auth
+- dashboard
+- pos
+- products
+- inventory
+- purchases
+- sales
+- customers
+- suppliers
+- expenses
+- reports
+- settings
+
+Explain:
+
+- routing
+- guards
+- interceptors
+- state management
+- reusable components
+- forms
+- tables
+- notifications
+- responsive design
+
+---
+
+# 25. BACKEND STRUCTURE
+
+Show a recommended structure such as:
+
+backend/
+
+src/
+
+Modules/
+
+Auth/
+Tenant/
+Organization/
+Store/
+User/
+Product/
+Customer/
+Supplier/
+Purchase/
+Inventory/
+Transfer/
+Sales/
+POS/
+Payment/
+Expense/
+Reports/
+Notification/
+Audit/
+Subscription/
+
+Shared/
+
+Explain why vertical feature modules are preferred.
+
+---
+
+# 26. SECURITY
+
+Create a dedicated security section.
+
+Include:
+
+- Authentication
+- Authorization
+- RBAC
+- Tenant isolation
+- Input validation
+- SQL injection protection
+- Secure secrets
+- HTTPS
+- Encryption
+- Audit logs
+- Rate limiting
+- Backups
+- Monitoring
+- Disaster recovery
+- Session security
+- Production access control
+
+Explain that security must exist from version 1.
+
+---
+
+# 27. OFFLINE MODE
+
+Explain that retail businesses may experience internet problems.
+
+Create a future strategy:
+
+Online Mode
+↓
+Local/PWA cache
+↓
+Controlled offline transactions
+↓
+Internet restored
+↓
+Sync
+↓
+Validation
+↓
+Cloud
+
+Clearly explain:
+
+Offline synchronization is complex.
+
+Do not implement it blindly in MVP.
+
+Define conflict rules before enabling offline stock-changing operations.
+
+---
+
+
+
+---
+
+[L+ADV] # ADVANCED ARCHITECTURE &amp; FUTURE PLATFORM CAPABILITIES
+
+The following five capabilities are strategic additions to the original VGS Retail OS
+blueprint. They must be treated as first-class product and architecture capabilities,
+while still being phased appropriately so that the MVP is not over-engineered.
+
+These capabilities are:
+
+1. Event Sourcing &amp; CQRS
+2. B2B Network &amp; Supply Chain
+3. Omnichannel Commerce
+4. Fraud Detection &amp; Risk Engine
+5. True Offline-First Sync
+
+The product must also connect these capabilities with the existing Automation Engine
+and AI Vision already defined in this blueprint.
+
+---
+
+[L+ADV] ## A. EVENT SOURCING &amp; CQRS
+
+### Why this is being added
+
+The system must be able to answer not only:
+
+&gt; &quot;What is the current stock?&quot;
+
+but also:
+
+&gt; &quot;Why is the current stock this amount?&quot;
+
+Traditional CRUD stores the latest state. For important business operations,
+VGS Retail OS should additionally preserve the business events that produced that state.
+
+Example:
+
+Purchase +100
+Sale -3
+Transfer Out -20
+Transfer In +20
+Return +1
+Adjustment -2
+
+The current state can therefore be explained from the business history.
+
+### Important principle
+
+Do NOT use Event Sourcing blindly for every table.
+
+Use it selectively for business-critical, audit-sensitive domains such as:
+
+- Sales
+- Inventory
+- Purchase
+- Payments
+- Transfers
+- Returns
+- Important financial/business state changes
+
+Normal CRUD can remain appropriate for:
+
+- Product master data
+- Categories
+- Brands
+- UI configuration
+- Other low-risk configuration data
+
+### Event model
+
+Each important event should conceptually contain:
+
+- EventId
+- TenantId
+- StoreId
+- AggregateId
+- AggregateType
+- EventType
+- Version
+- OccurredAt
+- UserId
+- CorrelationId
+- CausationId
+- Payload
+- Metadata
+
+### Example
+
+SALE_COMPLETED
+
+↓
+
+Inventory Projection
+
+Payment Projection
+
+Customer History Projection
+
+Analytics Projection
+
+Risk Engine
+
+Notification
+
+Audit
+
+### CQRS
+
+Separate:
+
+COMMAND SIDE
+- Receives business commands
+- Validates permissions
+- Applies business rules
+- Produces events
+
+QUERY SIDE
+- Reads optimized projections/read models
+- Powers dashboards
+- Powers reports
+- Powers operational screens
+
+Conceptual flow:
+
+Command
+→ Validation
+→ Business Rules
+→ Event Store
+→ Projection
+→ Read Model
+→ Dashboard / Reports
+
+### Important trade-off
+
+CQRS and Event Sourcing introduce complexity.
+
+They should be implemented where they create real business value, not simply
+because they are fashionable architectural patterns.
+
+---
+
+[L+ADV] ## B. B2B NETWORK &amp; SUPPLY CHAIN
+
+The long-term platform should connect retailers and suppliers.
+
+The future network can look like:
+
+Manufacturer
+→ Distributor
+→ Supplier
+→ Retailer
+→ Store
+→ Customer
+
+### Supplier Portal
+
+Suppliers should eventually be able to:
+
+- Create/manage company profile
+- Manage product catalogue
+- Receive purchase orders
+- Accept/reject orders
+- Confirm quantities
+- Confirm delivery dates
+- Update dispatch status
+- Upload invoices
+- View payment status
+- Handle returns
+- Communicate with retailers
+
+### B2B Purchase Flow
+
+Retailer
+→ Purchase Order
+→ Supplier Confirmation
+→ Dispatch
+→ Delivery
+→ Goods Receiving
+→ Inventory
+→ Payable
+→ Payment
+
+### Future B2B capabilities
+
+- Supplier discovery
+- Supplier comparison
+- Price comparison
+- Availability comparison
+- Lead-time comparison
+- Supplier performance score
+- Purchase recommendations
+- Reorder automation
+- Supplier communication
+
+The B2B network should be introduced only after the core VGS retail workflows
+are stable.
+
+---
+
+[L+ADV] ## C. OMNICHANNEL COMMERCE
+
+VGS Retail OS should eventually connect:
+
+- Physical stores
+- Online store
+- WhatsApp commerce where supported
+- Future mobile channels
+- Future marketplace integrations
+
+All channels should connect to the same business core.
+
+### One business core
+
+Customer
+→ Channel
+→ Order
+→ VGS Retail OS
+→ Inventory
+→ Payment
+→ Fulfillment
+→ Customer History
+
+### One Inventory Concept
+
+The platform should distinguish between:
+
+- Physical stock
+- Reserved stock
+- Available stock
+- In-transit stock
+- Channel-specific allocation
+
+Example:
+
+Total Stock = 100
+
+Physical Store = 60
+Online Reserved = 25
+WhatsApp Orders = 15
+
+### Online Store
+
+Future flow:
+
+Customer
+→ Online Store
+→ Product Catalogue
+→ Cart
+→ Checkout
+→ Payment
+→ Order
+→ VGS Retail OS
+→ Inventory
+→ Fulfillment
+
+### WhatsApp
+
+Future capability may allow:
+
+Customer asks for a product
+→ System identifies available products
+→ Customer receives product information
+→ Customer places order
+→ Order enters VGS Retail OS
+
+Actual WhatsApp functionality must depend on current Meta APIs,
+business account requirements, policies and commercial constraints.
+
+Do not promise literal one-click or unlimited integration without verification.
+
+---
+
+[L+ADV] ## D. FRAUD DETECTION &amp; RISK ENGINE
+
+Create a dedicated:
+
+# Retail Risk &amp; Fraud Detection Engine
+
+The system should detect unusual activity, not automatically accuse people.
+
+### Signals
+
+- Excessive bill cancellations
+- Excessive discounts
+- Suspicious returns
+- Cash variance
+- Stock variance
+- Frequent manual stock adjustments
+- Repeated bill edits
+- Unusual transaction timing
+- Unusual transaction values
+- Unusual employee/store patterns
+
+### Examples
+
+Cashier A:
+100 bills
+15 cancellations
+
+Cashier B:
+110 bills
+2 cancellations
+
+The system can flag Cashier A for review.
+
+Another example:
+
+Sale = ₹10,000
+Discount = ₹8,000
+
+This may create an elevated-risk alert.
+
+Another example:
+
+Expected Cash = ₹50,000
+Actual Cash = ₹47,500
+
+Create a cash variance alert.
+
+### Risk Architecture
+
+Transactions
+→ Events
+→ Rules
+→ Statistical Analysis
+→ Optional AI/ML Analysis
+→ Risk Score
+→ Alert
+→ Investigation Case
+→ Human Review
+
+### Risk language
+
+Use:
+
+- Unusual
+- Suspicious
+- Elevated Risk
+- Requires Review
+
+Do not use:
+
+- Guilty
+- Fraudulent Employee
+
+unless a separate authorized investigation establishes that conclusion.
+
+### Rule examples
+
+IF cancellation_count &gt; threshold
+THEN create risk alert
+
+IF discount &gt; threshold
+THEN flag transaction
+
+IF cash_variance &gt; threshold
+THEN create investigation
+
+IF stock_adjustments are unusually frequent
+THEN flag store/user
+
+The thresholds must be configurable and validated using real VGS data.
+
+---
+
+[L+ADV] ## E. TRUE OFFLINE-FIRST SYNC
+
+Offline operation is a core retail reliability capability.
+
+The system should allow selected retail operations to continue when internet
+connectivity temporarily disappears.
+
+### Normal mode
+
+POS
+→ Internet
+→ API
+→ Cloud
+
+### Offline mode
+
+POS
+→ Local Application
+→ Local Database
+→ Sync Queue
+
+### When internet returns
+
+Sync Queue
+→ Server Validation
+→ Accepted
+OR
+→ Conflict
+→ Conflict Resolution
+
+### Offline technology direction
+
+Evaluate:
+
+- Angular PWA
+- IndexedDB or equivalent browser storage
+- Local transaction store
+- Device identity
+- Sync queue
+- Event IDs
+- Idempotency keys
+- Retry strategy
+- Conflict detection
+- Conflict resolution
+- Server reconciliation
+- Sync status UI
+
+### Offline POS
+
+At minimum, the design should consider offline support for:
+
+- Product lookup from locally cached catalogue
+- Cart creation
+- Selected sales
+- Payment recording according to configured policy
+- Receipt generation
+- Local transaction history
+
+Stock-changing offline operations must be carefully controlled.
+
+### Conflict example
+
+Store A is offline and believes stock = 10.
+
+Store A sells 3.
+
+Another device also performs an operation against the same stock state.
+
+When connectivity returns, the server must reconcile the events deterministically.
+
+Possible strategies include:
+
+- Server-authoritative validation
+- Store-local stock boundaries
+- Reservations
+- Event reconciliation
+- Conflict queues
+- Human review for exceptional cases
+
+Do not pretend offline synchronization is trivial.
+
+Define conflict rules before enabling production offline stock-changing workflows.
+
+---
+
+[L+ADV] # ADVANCED PLATFORM FLOW
+
+Create a visual showing how the five capabilities connect:
+
+                    VGS RETAIL OS CORE
+                           |
+             +-------------+-------------+
+             |             |             |
+          POS/Sales     Purchase     Inventory
+             |             |             |
+             +-------------+-------------+
+                           |
+                      BUSINESS EVENTS
+                           |
+            +--------------+--------------+
+            |              |              |
+        Event Store       CQRS          Audit
+            |              |
+            +------+-------+
+                   |
+              Read Models
+                   |
+        +----------+----------+
+        |          |          |
+      Risk      Workflow     AI
+      Engine     Engine    Assistant
+        |
+     Alerts
+        |
+ Human Review
+
+Supplier Network ↔ Core ↔ Omnichannel Channels
+                     ^
+                     |
+                Offline Sync
+
+The final HTML must render this as a polished SVG/HTML diagram, not ASCII art.
+
+---
+
+[L+ADV] # ADVANCED DATA MODEL ADDITIONS
+
+Extend the conceptual data model with:
+
+Event
+EventProjection
+EventSubscription
+SyncOperation
+SyncConflict
+Device
+RiskAlert
+RiskCase
+RiskRule
+RiskSignal
+Workflow
+WorkflowRule
+WorkflowExecution
+Channel
+Order
+OrderItem
+InventoryReservation
+SupplierPortalUser
+
+These are conceptual entities and must not be treated as the final production schema.
+
+---
+
+[L+ADV] # ADVANCED API ADDITIONS
+
+Extend the API architecture conceptually with:
+
+/api/v1/events
+/api/v1/sync
+/api/v1/sync/conflicts
+/api/v1/risk
+/api/v1/risk/alerts
+/api/v1/risk/cases
+/api/v1/workflows
+/api/v1/workflows/rules
+/api/v1/b2b
+/api/v1/suppliers/portal
+/api/v1/channels
+/api/v1/orders
+/api/v1/reservations
+
+All endpoints must respect:
+
+- Authentication
+- Authorization
+- Tenant isolation
+- Idempotency
+- Validation
+- Audit
+- Correlation IDs
+- API versioning
+
+---
+
+[L+ADV] # ADVANCED ROADMAP PRIORITY
+
+The five capabilities must NOT all be built in the first release.
+
+Recommended order:
+
+## MVP
+
+- POS
+- Billing
+- Sales
+- Purchase
+- Inventory
+- Stores
+- Customers
+- Suppliers
+- Payments
+- Basic reports
+- Basic audit
+- Roles and permissions
+
+## V1 / VGS Pilot
+
+- Strong inventory ledger
+- Strong audit
+- Selected event-driven operations
+- Operational dashboards
+- Production hardening
+
+## V2
+
+- Event Sourcing for selected domains
+- CQRS projections
+- Offline-first POS
+- Sync engine
+
+## V3
+
+- Fraud/risk engine
+- Workflow engine improvements
+- Supplier portal
+- B2B workflows
+
+## V4
+
+- Online store
+- Omnichannel order management
+- Inventory reservations
+- WhatsApp integrations where commercially and technically supported
+
+## V5+
+
+- Advanced AI
+- Predictive inventory
+- AI procurement
+- AI-assisted risk analysis
+- Agentic workflows
+- Retail ecosystem
+
+This sequencing is a strategic recommendation, not a fixed commitment.
+
+---
+
+[L+ADV] # ADVANCED TESTING REQUIREMENTS
+
+Add testing for:
+
+### Event Architecture
+
+- Event ordering
+- Event versioning
+- Event replay
+- Projection rebuild
+- Idempotency
+- Duplicate event handling
+
+### Offline
+
+- Internet disconnect during sale
+- Reconnect
+- Retry
+- Duplicate sync
+- Conflict detection
+- Conflict resolution
+- Device recovery
+
+### B2B
+
+- Supplier order acceptance
+- Partial fulfillment
+- Delivery update
+- Invoice upload
+- Payment status
+
+### Omnichannel
+
+- Online order
+- Inventory reservation
+- Cancellation
+- Return
+- Store fulfillment
+
+### Risk
+
+- Rule evaluation
+- False positive handling
+- Risk scoring
+- Investigation lifecycle
+
+---
+
+[L+ADV] # ADVANCED SECURITY REQUIREMENTS
+
+Additional controls:
+
+- Strict tenant isolation
+- Device registration for offline clients
+- Signed/authenticated sync operations
+- Idempotency protection
+- Event immutability
+- Audit preservation
+- Supplier portal isolation
+- Channel authentication
+- Sensitive action approval
+- Risk data access controls
+
+---
+
+[L+ADV] # ADVANCED INVESTOR STORY
+
+The five capabilities create a long-term expansion path:
+
+Internal VGS System
+→ Multi-Store Retail Platform
+→ Event-Driven Retail OS
+→ Offline-First Retail
+→ Supplier Network
+→ Omnichannel Commerce
+→ Risk Intelligence
+→ Workflow Automation
+→ AI-Assisted Retail
+→ Retail Ecosystem
+
+The investor narrative should remain realistic:
+
+The company is not claiming that all of these capabilities will exist immediately.
+
+The strategy is to solve today&#x27;s VGS problems first and progressively unlock larger
+platform opportunities as real customer validation is achieved.
+
+---
+
+[L+ADV] # ADVANCED NON-TECHNICAL EXPLANATIONS
+
+For the final HTML, add simple explanation boxes:
+
+### Event Sourcing
+&quot;The system remembers important business events, not just the final number.&quot;
+
+### CQRS
+&quot;The system separates changing business data from reading business information.&quot;
+
+### B2B Network
+&quot;Suppliers and retailers can eventually work together through the same platform.&quot;
+
+### Omnichannel
+&quot;Customers can buy through physical stores and digital channels while the business
+uses one connected system.&quot;
+
+### Fraud Detection
+&quot;The system identifies unusual activity and asks authorized people to review it.&quot;
+
+### Offline-First
+&quot;The store can continue selected operations even when the internet temporarily fails.&quot;
+
+---
+
+[L+ADV] # ADVANCED 20-YEAR EVOLUTION
+
+Update the existing 20-year roadmap to show the five capabilities progressively.
+
+Years 1–2:
+Core VGS Retail OS
+
+Years 3–5:
+Multi-tenant SaaS + event-driven foundation
+
+Years 5–7:
+Offline-first + B2B supplier capabilities
+
+Years 7–10:
+Omnichannel + risk intelligence + workflow automation
+
+Years 10–15:
+AI-assisted retail intelligence
+
+Years 15–20:
+Agentic retail ecosystem / Retail Operating System
+
+These are strategic horizons, not guaranteed dates.
+
+---
+
+[L+ADV] # FINAL ARCHITECTURAL PRINCIPLE
+
+The system should follow this principle:
+
+&gt; Build a simple and reliable retail core first, but create strong architectural
+&gt; boundaries so that Event Sourcing, CQRS, Offline Sync, B2B, Omnichannel,
+&gt; Fraud Detection, Workflow Automation and AI can be introduced without
+&gt; rewriting the entire product.
+
+Do not sacrifice the usability of today&#x27;s five VGS stores for a hypothetical
+twenty-year architecture.
+
+Build for evolution, not for architectural fashion.
+
+
+# 28. AI VISION
+
+Create a dedicated section:
+
+# AI Retail Assistant
+
+Possible future questions:
+
+&quot;How did my stores perform today?&quot;
+
+&quot;Which store is doing best?&quot;
+
+&quot;Which products may run out?&quot;
+
+&quot;What should I purchase?&quot;
+
+&quot;Why did sales fall?&quot;
+
+&quot;Which products are slow moving?&quot;
+
+&quot;Show unusual discounts.&quot;
+
+&quot;Show unusual returns.&quot;
+
+&quot;Prepare a purchase recommendation.&quot;
+
+&quot;Give me today&#x27;s business briefing.&quot;
+
+AI should:
+
+- Analyze
+- Explain
+- Recommend
+- Predict
+- Automate selected tasks
+
+But:
+
+AI must NOT become the source of truth.
+
+Database remains source of truth.
+
+Sensitive actions should require permissions and/or approval.
+
+---
+
+# 29. AUTOMATION ENGINE
+
+Future automation module.
+
+Examples:
+
+IF stock &lt; reorder level
+THEN create alert
+
+IF supplier payment is due
+THEN notify owner
+
+IF daily sales cross threshold
+THEN send notification
+
+IF unusual discount occurs
+THEN flag transaction
+
+IF stock remains stagnant for X days
+THEN identify slow-moving product
+
+Create a visual rule-engine diagram.
+
+---
+
+# 30. NOTIFICATION SYSTEM
+
+Include:
+
+- In-app
+- Email
+- WhatsApp where supported/authorized
+- SMS where needed
+- Push notifications in future
+
+Examples:
+
+Low stock
+Payment due
+Transfer pending
+Purchase received
+Daily report
+Suspicious activity
+Subscription expiry
+
+---
+
+# 31. SAAS BUSINESS MODEL
+
+Explain how VGS Retail OS becomes a SaaS.
+
+Flow:
+
+Customer Signup
+↓
+Create Business
+↓
+Add Stores
+↓
+Add Users
+↓
+Configure Products
+↓
+Choose Plan
+↓
+Subscription
+↓
+Start Using
+
+Potential plans:
+
+Starter
+Business
+Advanced
+
+Do not present fixed pricing as final.
+
+Explain pricing should be validated through real customer research.
+
+---
+
+# 32. TARGET CUSTOMERS
+
+Initial target:
+
+Small and medium retail businesses.
+
+Possible verticals:
+
+- Garments
+- Blankets
+- Home furnishing
+- Mattress
+- Footwear
+- Furniture
+- Electronics
+- Hardware
+- General retail
+- Cosmetics
+
+Do not try to serve every industry in version 1.
+
+---
+
+# 33. COMPETITIVE POSITIONING
+
+Do NOT make unsupported claims about being better than named competitors.
+
+Instead explain differentiation areas:
+
+- Multi-store simplicity
+- Strong inventory visibility
+- Real business dashboard
+- Store transfer
+- AI-assisted insights
+- Modular architecture
+- Affordable SaaS
+- Easy onboarding
+- Retail-first workflows
+- Future extensibility
+
+Include a &quot;Why customers might choose us&quot; section.
+
+---
+
+# 34. PRODUCT PRINCIPLES
+
+Create 10 principles:
+
+1. Business first
+2. Simple UX
+3. Reliable transactions
+4. Stock must be traceable
+5. Secure by default
+6. Multi-tenant from the beginning
+7. API-first thinking
+8. AI with guardrails
+9. Automate carefully
+10. Build for evolution
+
+---
+
+# 35. DEVELOPMENT ROADMAP
+
+Create a visual roadmap.
+
+## Phase 0
+Discovery
+
+## Phase 1
+Foundation
+
+## Phase 2
+Master Data
+
+## Phase 3
+Purchase + Inventory
+
+## Phase 4
+POS + Billing
+
+## Phase 5
+Customers + Suppliers + Expenses
+
+## Phase 6
+Reports + Dashboard
+
+## Phase 7
+VGS Pilot
+
+## Phase 8
+Hardening
+
+## Phase 9
+SaaS
+
+## Phase 10
+AI + Automation
+
+Explain deliverables and success criteria for every phase.
+
+---
+
+# 36. 0–2 YEAR ROADMAP
+
+Create a visual timeline.
+
+0–3 months
+Foundation
+
+3–6 months
+Core Operations
+
+6–9 months
+POS
+
+9–12 months
+VGS Pilot
+
+Year 2
+SaaS Launch
+
+Do not promise unrealistic timelines.
+
+State that timelines depend on scope, team size and development quality.
+
+---
+
+# 37. 3–5 YEAR ROADMAP
+
+Focus on:
+
+- More customers
+- Better onboarding
+- Advanced reporting
+- Integrations
+- Automation
+- Event Sourcing &amp; CQRS
+- Offline-First Sync
+- B2B Network &amp; Supply Chain
+- Omnichannel Commerce
+- Fraud Detection &amp; Risk Engine
+- AI analytics
+- Demand forecasting
+- Better mobile support
+
+---
+
+# 38. 6–10 YEAR ROADMAP
+
+Focus on:
+
+- Connected retail
+- Mobile operations
+- AI recommendations
+- Online/offline commerce
+- API ecosystem
+- Integrations
+- Advanced analytics
+- Larger multi-store customers
+
+---
+
+# 39. 11–20 YEAR VISION
+
+This section must be strategic rather than fantasy.
+
+Explain that technology will change.
+
+The durable vision is:
+
+## Years 11–12
+Platform maturity
+
+## Years 13–14
+AI-assisted operations
+
+## Years 15–16
+Retail ecosystem
+
+## Years 17–18
+Predictive retail
+
+## Years 19–20
+Retail Operating System
+
+Possible future capabilities:
+
+- AI business agents
+- Predictive inventory
+- Demand forecasting
+- Intelligent procurement
+- Pricing recommendations
+- Customer intelligence
+- Autonomous reporting
+- Connected devices
+- Retail APIs
+- Partner ecosystem
+- Multi-country readiness
+
+Always explain:
+
+&gt; These are long-term possibilities, not guaranteed features.
+
+---
+
+# 40. BUSINESS MODEL EVOLUTION
+
+Explain:
+
+Stage 1:
+Internal VGS software
+
+Stage 2:
+VGS pilot
+
+Stage 3:
+First external customer
+
+Stage 4:
+Subscription SaaS
+
+Stage 5:
+Advanced plans
+
+Stage 6:
+AI/automation premium features
+
+Stage 7:
+API / ecosystem revenue possibilities
+
+---
+
+# 41. SUCCESS METRICS
+
+Create a professional KPI section.
+
+Include:
+
+- Billing speed
+- Stock accuracy
+- Daily active users
+- Store adoption
+- Report generation time
+- Customer retention
+- Monthly recurring revenue
+- Churn
+- Support tickets
+- Feature adoption
+- Inventory accuracy
+- SaaS onboarding time
+
+Explain why each metric matters.
+
+---
+
+# 42. RISKS
+
+Create a realistic risk section.
+
+Include:
+
+- Scope creep
+- Poor data quality
+- Incorrect inventory logic
+- Security vulnerabilities
+- Tax/compliance mistakes
+- AI hallucinations
+- Offline sync conflicts
+- User resistance
+- Too many features too early
+- SaaS infrastructure costs
+- Customer support burden
+
+For every risk give:
+
+Risk
+Impact
+Mitigation
+
+---
+
+# 43. TESTING STRATEGY
+
+Include:
+
+Unit Tests
+Integration Tests
+API Tests
+UI Tests
+End-to-End Tests
+Security Tests
+Performance Tests
+Database Tests
+
+Critical workflows:
+
+- Sale
+- Return
+- Purchase
+- Stock transfer
+- Payment
+- Tenant isolation
+- Permissions
+
+Explain that these must be tested before production.
+
+---
+
+# 44. OBSERVABILITY
+
+Future production system should include:
+
+- Logs
+- Metrics
+- Error tracking
+- Health checks
+- Database monitoring
+- API latency
+- Background job monitoring
+- Audit logs
+- Alerts
+
+Explain this in simple language.
+
+---
+
+# 45. DEPLOYMENT
+
+Explain:
+
+Developer Machine
+↓
+Git
+↓
+CI/CD
+↓
+Test Environment
+↓
+Staging
+↓
+Production
+
+Show:
+
+Angular
+ASP.NET Core
+PostgreSQL
+Redis
+Background Workers
+File Storage
+
+Create a visual deployment architecture.
+
+---
+
+# 46. DOCUMENT DESIGN REQUIREMENTS
+
+This is extremely important.
+
+Do NOT create a boring document.
+
+The HTML must look like a professional SaaS product strategy document.
+
+Use:
+
+- Modern dashboard-style design
+- White/light background
+- Navy + blue + teal accent colors
+- Large section headers
+- Cards
+- Badges
+- Timelines
+- Architecture diagrams
+- Flow diagrams
+- Tables
+- KPI cards
+- Feature cards
+- Callout boxes
+- Sticky sidebar navigation
+- Table of contents
+- Progress indicator
+- Responsive layout
+- Print-friendly layout
+- A4 PDF print CSS
+
+Use:
+
+HTML5
+CSS3
+Vanilla JavaScript
+
+Do NOT require a complex frontend framework just to render the document.
+
+Prefer:
+
+- SVG
+- CSS
+- HTML
+- JavaScript
+
+for diagrams.
+
+---
+
+# 47. VISUAL DESIGN
+
+Create:
+
+## Cover
+
+Large:
+
+VGS RETAIL OS
+
+Subtitle:
+
+&quot;Complete Retail Business Operating System&quot;
+
+Include:
+
+- 5-store visual
+- dashboard illustration
+- future AI concept
+- clean professional layout
+
+---
+
+# 48. SIDEBAR NAVIGATION
+
+Create a sticky left sidebar.
+
+Sections:
+
+01 Executive Summary
+02 Business Problem
+03 Product Vision
+04 Users
+05 Feature Map
+06 POS
+07 Inventory
+08 Purchase
+09 Customers
+10 Suppliers
+11 Expenses
+12 Dashboard
+13 Reports
+14 Multi-Store
+15 Multi-Tenant
+16 Technology
+17 Architecture
+18 Security
+19 Offline
+20 AI
+21 Automation
+22 SaaS
+23 Roadmap
+24 20-Year Vision
+25 Risks
+26 Testing
+27 Success Metrics
+28 Glossary
+
+Clicking navigation items should smoothly scroll to sections.
+
+---
+
+# 49. VISUAL REQUIREMENT
+
+Every major section should contain at least one useful visual element where appropriate.
+
+Examples:
+
+Architecture → architecture diagram
+
+POS → POS mockup
+
+Inventory → stock flow
+
+Multi-tenant → tenant diagram
+
+Roadmap → timeline
+
+AI → AI flow
+
+SaaS → customer onboarding flow
+
+Dashboard → dashboard mockup
+
+Do NOT add decorative visuals that do not explain anything.
+
+---
+
+# 50. RESPONSIVE DESIGN
+
+The document must work on:
+
+- Mac
+- Windows
+- Desktop
+- Tablet
+- Mobile
+
+Use responsive CSS.
+
+---
+
+# 51. PRINT / PDF
+
+The HTML must have excellent print support.
+
+Add:
+
+@media print
+
+Rules should:
+
+- Remove sidebar
+- Remove buttons
+- Preserve colors where possible
+- Prevent tables from breaking badly
+- Avoid cutting diagrams
+- Add page breaks intelligently
+- Maintain A4 layout
+
+The document should be easy to export:
+
+Browser
+→ Print
+→ Save as PDF
+
+---
+
+# 52. ACCESSIBILITY
+
+Use:
+
+- Semantic HTML
+- Proper headings
+- Accessible contrast
+- ARIA labels where appropriate
+- Keyboard navigation
+- Meaningful alt text for any images
+
+---
+
+# 53. DOCUMENT STRUCTURE
+
+Use this exact high-level structure:
+
+1. Cover
+2. Table of Contents
+3. Executive Summary
+4. Business Problem
+5. Product Vision
+6. Target Users
+7. Product Principles
+8. Complete Feature Map
+9. POS &amp; Billing
+10. Sales
+11. Purchase
+12. Inventory
+13. Store Transfer
+14. Customers
+15. Suppliers
+16. Expenses
+17. Payments
+18. Dashboard
+19. Reports
+20. Roles &amp; Permissions
+21. Multi-Store
+22. Multi-Tenant SaaS
+23. Technology Stack
+24. System Architecture
+25. Frontend Architecture
+26. Backend Architecture
+27. Database Architecture
+28. API Architecture
+29. Security
+30. Offline Strategy
+31. Notifications
+32. Automation Engine
+33. AI Vision
+34. AI Development Strategy
+35. Testing Strategy
+36. Deployment
+37. SaaS Business Model
+38. Target Market
+39. Competitive Positioning
+40. MVP
+41. Development Roadmap
+42. 0–2 Year Roadmap
+43. 3–5 Year Roadmap
+44. 6–10 Year Roadmap
+45. 11–20 Year Vision
+46. Business Model Evolution
+47. Success Metrics
+48. Risks &amp; Mitigation
+49. Future Possibilities
+50. Glossary
+51. Final Vision
+
+---
+
+# 54. CONTENT QUALITY RULES
+
+Follow these rules:
+
+1. Do not make unsupported claims.
+2. Do not invent market statistics.
+3. Do not claim compliance without verification.
+4. Do not present future features as guaranteed.
+5. Clearly label examples as examples.
+6. Explain technical terms in simple language.
+7. Avoid unnecessary technical jargon.
+8. Keep business logic realistic.
+9. Think about real retail workflows.
+10. Think about edge cases.
+11. Think about data integrity.
+12. Think about security.
+13. Think about scalability.
+14. Think about 20-year evolution.
+15. Do not over-engineer MVP.
+
+---
+
+# 55. FINAL OUTPUT
+
+Create:
+
+## /docs/vgs-retail-os-product-blueprint.md
+
+This Markdown file should contain the complete source content.
+
+Also create:
+
+## /docs/vgs-retail-os-product-blueprint.html
+
+The HTML must be generated from the Markdown content or use the same structured content.
+
+The HTML should be fully self-contained.
+
+Prefer:
+
+- No external image dependencies
+- No external CSS dependency
+- No external JS dependency
+
+All major diagrams should be inline SVG or CSS.
+
+---
+
+# 56. FINAL QUALITY CHECK
+
+Before finishing, verify:
+
+### Business
+
+- Can a non-technical person understand the project?
+- Is the business problem clear?
+- Is the SaaS vision clear?
+
+### Product
+
+- Are all major modules explained?
+- Are workflows clear?
+- Are dependencies clear?
+
+### Technical
+
+- Is the tech stack clearly explained?
+- Is architecture clear?
+- Is multi-tenancy clear?
+- Is security covered?
+- Is database architecture covered?
+
+### AI
+
+- Is AI development strategy explained?
+- Is AI product strategy explained?
+- Are AI guardrails explained?
+
+### Future
+
+- Are 0–2 years covered?
+- Are 3–5 years covered?
+- Are 6–10 years covered?
+- Are 11–20 years covered?
+
+### Visual
+
+- Does every important concept have an appropriate visual?
+- Are diagrams readable?
+- Is the dashboard visually understandable?
+- Is the roadmap visual?
+- Is the HTML professional?
+
+### PDF
+
+- Does print preview look good?
+- Are page breaks sensible?
+- Are tables readable?
+- Are diagrams not cut?
+- Is the cover professional?
+
+---
+
+# 57. MOST IMPORTANT INSTRUCTION
+
+Do not rush.
+
+First think through the complete product.
+
+Then create the information architecture.
+
+Then write the content.
+
+Then design the HTML.
+
+Then create diagrams.
+
+Then add responsive styling.
+
+Then add print styling.
+
+Then perform a final quality review.
+
+The final result should feel like a document prepared by:
+
+&gt; a professional SaaS product company + enterprise architect + product strategist
+
+and NOT like a simple AI-generated README.
+
+The document should be something the founder can confidently show to:
+
+- Family
+- Business partners
+- Employees
+- Developers
+- Investors
+- Potential customers
+- Future technical team
+
+while also being detailed enough to serve as the **master product reference document for future AI coding agents.**</pre>
+        </details>
+      </main>
+    </article>
+  </div>
+</body>
+</html>

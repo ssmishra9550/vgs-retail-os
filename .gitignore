@@ -1,0 +1,49 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# .NET / ASP.NET Core
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node / Angular
+node_modules/
+dist/
+coverage/
+.angular/
+.nx/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / test outputs
+artifacts/
+reports/
+*.trx
+*.coverage
+*.coveragexml
+
+# Environment / local config
+.env
+.env.*
+!.env.example
+appsettings.Development.local.json
+
+# Docker / containers
+*.pid
+*.seed
+*.pid.lock
+
