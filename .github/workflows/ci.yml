@@ -70,6 +70,12 @@ jobs:
       - name: Backend Build
         run: dotnet build backend/VGS.RetailOS.sln --no-restore
 
+      - name: Apply Database Migrations
+        run: >
+          dotnet ef database update
+          --project backend/src/Infrastructure/VGS.RetailOS.Infrastructure/VGS.RetailOS.Infrastructure.csproj
+          --startup-project backend/src/ApiHost/VGS.RetailOS.ApiHost/VGS.RetailOS.ApiHost.csproj
+
       - name: Backend Tests
         run: dotnet test backend/VGS.RetailOS.sln --no-build
 
