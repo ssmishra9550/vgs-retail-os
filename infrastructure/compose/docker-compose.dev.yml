@@ -1,0 +1,52 @@
+name: vgs-retail-os-dev
+
+services:
+  postgres:
+    image: postgres:17.4-alpine
+    container_name: vgs-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-vgs_retail_os_dev}
+      POSTGRES_USER: ${POSTGRES_USER:-vgs_dev}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vgs_dev_password_placeholder}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - vgs-postgres-dev-data:/var/lib/postgresql/data
+    networks:
+      - vgs-dev-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-vgs_dev} -d $${POSTGRES_DB:-vgs_retail_os_dev}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  redis:
+    image: redis:7.4.2-alpine
+    container_name: vgs-redis-dev
+    restart: unless-stopped
+    command: redis-server --appendonly yes --loglevel warning
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - vgs-redis-dev-data:/data
+    networks:
+      - vgs-dev-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+networks:
+  vgs-dev-network:
+    driver: bridge
+    name: vgs-dev-network
+
+volumes:
+  vgs-postgres-dev-data:
+    name: vgs-postgres-dev-data
+  vgs-redis-dev-data:
+    name: vgs-redis-dev-data
