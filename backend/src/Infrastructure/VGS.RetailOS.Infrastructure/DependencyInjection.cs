@@ -18,6 +18,23 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connectionString, b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
 
+        services.AddIdentityCore<VGS.RetailOS.Infrastructure.Auth.DAC.Entities.ApplicationUser>(options =>
+        {
+            options.Password.RequireDigit = true;
+            options.Password.RequireLowercase = true;
+            options.Password.RequireUppercase = true;
+            options.Password.RequireNonAlphanumeric = true;
+            options.Password.RequiredLength = 12;
+
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+            options.Lockout.MaxFailedAccessAttempts = 5;
+            options.Lockout.AllowedForNewUsers = true;
+
+            options.User.RequireUniqueEmail = true;
+        })
+        .AddRoles<VGS.RetailOS.Infrastructure.Auth.DAC.Entities.ApplicationRole>()
+        .AddEntityFrameworkStores<AppDbContext>();
+
         var redisConnectionString = configuration.GetConnectionString("Redis");
         if (string.IsNullOrEmpty(redisConnectionString))
         {
