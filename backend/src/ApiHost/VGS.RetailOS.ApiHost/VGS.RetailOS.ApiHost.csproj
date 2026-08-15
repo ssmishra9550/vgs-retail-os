@@ -4,6 +4,14 @@
     <ProjectReference Include="..\..\Shared\VGS.RetailOS.Shared\VGS.RetailOS.Shared.csproj" />
     <ProjectReference Include="..\..\Contracts\VGS.RetailOS.Contracts\VGS.RetailOS.Contracts.csproj" />
     <ProjectReference Include="..\..\Modules\VGS.RetailOS.Modules\VGS.RetailOS.Modules.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\VGS.RetailOS.Infrastructure\VGS.RetailOS.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <PropertyGroup>
