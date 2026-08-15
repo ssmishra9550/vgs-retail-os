@@ -1,0 +1,93 @@
+name: CI Baseline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: Backend CI
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: vgs_retail_os_dev
+          POSTGRES_USER: vgs_dev
+          POSTGRES_PASSWORD: vgs_dev_password_placeholder
+        ports:
+          - 5435:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      POSTGRES_HOST: 127.0.0.1
+      POSTGRES_PORT: 5435
+      POSTGRES_DB: vgs_retail_os_dev
+      POSTGRES_USER: vgs_dev
+      POSTGRES_PASSWORD: vgs_dev_password_placeholder
+      REDIS_HOST: 127.0.0.1
+      REDIS_PORT: 6379
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: 'backend/global.json'
+
+      - name: Backend Restore
+        run: dotnet restore backend/VGS.RetailOS.sln
+
+      - name: Backend Build
+        run: dotnet build backend/VGS.RetailOS.sln --no-restore
+
+      - name: Backend Tests
+        run: dotnet test backend/VGS.RetailOS.sln --no-build
+
+  frontend:
+    name: Frontend CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: Frontend Install
+        run: npm ci
+        working-directory: frontend
+
+      - name: Frontend Build
+        run: npm run build
+        working-directory: frontend
+
+      - name: Frontend Tests
+        run: npm run test -- --watch=false
+        working-directory: frontend
