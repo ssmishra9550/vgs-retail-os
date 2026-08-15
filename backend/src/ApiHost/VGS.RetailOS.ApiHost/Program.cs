@@ -1,13 +1,16 @@
 using VGS.RetailOS.Infrastructure;
+using VGS.RetailOS.Shared.Errors;
 using VGS.RetailOS.Shared.Observability.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddVgsStructuredLogging();
+builder.Services.AddVgsErrorHandling();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
+app.UseVgsErrorHandling();
 app.UseVgsRequestLogging();
 
 app.UseHttpsRedirection();
