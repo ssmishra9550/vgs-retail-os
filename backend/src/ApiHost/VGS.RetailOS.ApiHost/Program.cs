@@ -13,6 +13,18 @@ var app = builder.Build();
 app.UseVgsErrorHandling();
 app.UseVgsRequestLogging();
 
+app.MapHealthChecks("/health/live", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+{
+    Predicate = r => r.Tags.Contains("live"),
+    ResponseWriter = VGS.RetailOS.Shared.Observability.HealthChecks.HealthCheckResponseWriter.WriteResponse
+});
+
+app.MapHealthChecks("/health/ready", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+{
+    Predicate = r => r.Tags.Contains("ready"),
+    ResponseWriter = VGS.RetailOS.Shared.Observability.HealthChecks.HealthCheckResponseWriter.WriteResponse
+});
+
 app.UseHttpsRedirection();
 
 app.MapGet("/", () => Results.Ok(new

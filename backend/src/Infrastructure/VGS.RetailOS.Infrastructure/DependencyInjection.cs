@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 using VGS.RetailOS.Infrastructure.Caching;
 using VGS.RetailOS.Infrastructure.Data;
+using VGS.RetailOS.Infrastructure.HealthChecks;
 using VGS.RetailOS.Shared.BuildingBlocks.Caching;
 
 namespace VGS.RetailOS.Infrastructure;
@@ -27,6 +28,11 @@ public static class DependencyInjection
             ConnectionMultiplexer.Connect(redisConnectionString));
 
         services.AddTransient<IRedisCache, RedisCacheService>();
+
+        services.AddHealthChecks()
+            .AddCheck("self", () => Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckResult.Healthy(), tags: new[] { "live" })
+            .AddDbContextCheck<AppDbContext>("postgresql", tags: new[] { "ready", "db" })
+            .AddCheck<RedisHealthCheck>("redis", tags: new[] { "ready", "cache" });
 
         return services;
     }
