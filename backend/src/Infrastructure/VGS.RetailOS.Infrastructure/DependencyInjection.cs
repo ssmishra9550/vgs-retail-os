@@ -39,8 +39,39 @@ public static class DependencyInjection
         services.AddTransient<VGS.RetailOS.Modules.Auth.IBL.IPasswordVerifier, VGS.RetailOS.Infrastructure.Auth.DAC.IdentityPasswordVerifier>();
         services.AddScoped<VGS.RetailOS.Modules.Auth.IDAC.IAuthDAC, VGS.RetailOS.Infrastructure.Auth.DAC.AuthDAC>();
 
-        services.Configure<VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions>(configuration.GetSection(VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions.SectionName));
+        var jwtSection = configuration.GetSection(VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions.SectionName);
+        services.Configure<VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions>(jwtSection);
         services.AddTransient<VGS.RetailOS.Modules.Auth.IBL.ITokenService, VGS.RetailOS.Infrastructure.Auth.Tokens.TokenService>();
+
+        var jwtOptions = jwtSection.Get<VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions>() ?? new VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions();
+        jwtOptions.Validate();
+
+        var signingKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(jwtOptions.SecretKey));
+
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(options =>
+        {
+            options.RequireHttpsMetadata = false;
+            options.SaveToken = true;
+            options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = jwtOptions.Issuer,
+                ValidateAudience = true,
+                ValidAudience = jwtOptions.Audience,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = signingKey,
+                ValidateLifetime = true,
+                RequireExpirationTime = true,
+                ClockSkew = TimeSpan.FromSeconds(5)
+            };
+        });
+
+        services.AddAuthorization();
 
         var redisConnectionString = configuration.GetConnectionString("Redis");
         if (string.IsNullOrEmpty(redisConnectionString))

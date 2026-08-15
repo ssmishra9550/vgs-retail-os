@@ -16,7 +16,11 @@ public class RedisCacheIntegrationTests
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
                 { "ConnectionStrings:DefaultConnection", "Host=localhost;Database=dummy" },
-                { "ConnectionStrings:Redis", "localhost:6379" }
+                { "ConnectionStrings:Redis", "localhost:6379" },
+                { "Security:Jwt:Issuer", "VGS.RetailOS" },
+                { "Security:Jwt:Audience", "VGS.RetailOS.App" },
+                { "Security:Jwt:ExpirationMinutes", "15" },
+                { "Security:Jwt:SecretKey", "vgs_dev_jwt_signing_key_min_32_characters_long_placeholder" }
             })
             .Build();
 

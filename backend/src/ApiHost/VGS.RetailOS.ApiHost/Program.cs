@@ -13,6 +13,9 @@ var app = builder.Build();
 app.UseVgsErrorHandling();
 app.UseVgsRequestLogging();
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapHealthChecks("/health/live", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
 {
     Predicate = r => r.Tags.Contains("live"),
