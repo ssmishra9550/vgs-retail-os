@@ -46,6 +46,10 @@ jobs:
       POSTGRES_PASSWORD: vgs_dev_password_placeholder
       REDIS_HOST: 127.0.0.1
       REDIS_PORT: 6379
+      Security__Jwt__SecretKey: vgs_ci_jwt_signing_key_for_tests_32_chars_minimum
+      Security__Jwt__Issuer: VGS.RetailOS
+      Security__Jwt__Audience: VGS.RetailOS.App
+      Security__Jwt__ExpirationMinutes: 15
 
     steps:
       - name: Checkout Code
