@@ -35,6 +35,10 @@ public static class DependencyInjection
         .AddRoles<VGS.RetailOS.Infrastructure.Auth.DAC.Entities.ApplicationRole>()
         .AddEntityFrameworkStores<AppDbContext>();
 
+        services.AddTransient<Microsoft.AspNetCore.Identity.IPasswordHasher<VGS.RetailOS.Infrastructure.Auth.DAC.Entities.ApplicationUser>, Microsoft.AspNetCore.Identity.PasswordHasher<VGS.RetailOS.Infrastructure.Auth.DAC.Entities.ApplicationUser>>();
+        services.AddTransient<VGS.RetailOS.Modules.Auth.IBL.IPasswordVerifier, VGS.RetailOS.Infrastructure.Auth.DAC.IdentityPasswordVerifier>();
+        services.AddScoped<VGS.RetailOS.Modules.Auth.IDAC.IAuthDAC, VGS.RetailOS.Infrastructure.Auth.DAC.AuthDAC>();
+
         var redisConnectionString = configuration.GetConnectionString("Redis");
         if (string.IsNullOrEmpty(redisConnectionString))
         {
