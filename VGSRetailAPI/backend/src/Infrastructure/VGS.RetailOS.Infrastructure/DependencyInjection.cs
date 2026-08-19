@@ -83,6 +83,14 @@ public static class DependencyInjection
         services.AddScoped<VGS.RetailOS.Modules.ReportsManagement.Report.IDAC.IReportDAC, VGS.RetailOS.Infrastructure.ReportsManagement.DAC.ReportDAC>();
         services.AddScoped<VGS.RetailOS.Modules.ReportsManagement.Report.IBL.IReportBL, VGS.RetailOS.Modules.ReportsManagement.Report.BL.ReportBL>();
 
+        // Stock Transfers
+        services.AddScoped<VGS.RetailOS.Modules.InventoryManagement.StockTransfer.IDAC.IStockTransferDAC, VGS.RetailOS.Infrastructure.InventoryManagement.DAC.StockTransferDAC>();
+        services.AddScoped<VGS.RetailOS.Modules.InventoryManagement.StockTransfer.IBL.IStockTransferBL, VGS.RetailOS.Modules.InventoryManagement.StockTransfer.BL.StockTransferBL>();
+
+        // Returns
+        services.AddScoped<VGS.RetailOS.Modules.ReturnsManagement.Return.IDAC.IReturnDAC, VGS.RetailOS.Infrastructure.ReturnsManagement.DAC.ReturnDAC>();
+        services.AddScoped<VGS.RetailOS.Modules.ReturnsManagement.Return.IBL.IReturnBL, VGS.RetailOS.Modules.ReturnsManagement.Return.BL.ReturnBL>();
+
         var jwtSection = configuration.GetSection(VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions.SectionName);
         services.Configure<VGS.RetailOS.Infrastructure.Auth.Tokens.JwtOptions>(jwtSection);
         services.AddTransient<VGS.RetailOS.Modules.Auth.IBL.ITokenService, VGS.RetailOS.Infrastructure.Auth.Tokens.TokenService>();
