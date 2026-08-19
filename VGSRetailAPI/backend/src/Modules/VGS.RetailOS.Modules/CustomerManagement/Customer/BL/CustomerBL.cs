@@ -103,7 +103,15 @@ public class CustomerBL : ICustomerBL
         return tenantId;
     }
 
-    private static CustomerResponse MapToResponse(CustomerBO bo)
+    
+    public async Task DeleteCustomerAsync(Guid id, CancellationToken cancellationToken)
+    {
+        var tenantId = GetTenantId();
+        var success = await _customerDac.DeleteCustomerAsync(id, tenantId, cancellationToken);
+        if (!success)
+            throw new NotFoundException($"'Customer' with ID {id} not found.");
+    }
+private static CustomerResponse MapToResponse(CustomerBO bo)
     {
         return new CustomerResponse
         {

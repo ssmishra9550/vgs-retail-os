@@ -10,4 +10,5 @@ public interface ICustomerBL
     Task<CustomerResponse> CreateCustomerAsync(CreateCustomerRequest request, CancellationToken cancellationToken);
     Task<CustomerResponse> UpdateCustomerAsync(Guid id, UpdateCustomerRequest request, CancellationToken cancellationToken);
     Task UpdateCreditBalanceAsync(Guid customerId, decimal amount, CancellationToken cancellationToken);
+    Task DeleteCustomerAsync(Guid id, CancellationToken cancellationToken);
 }

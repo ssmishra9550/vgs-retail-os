@@ -3,7 +3,7 @@ using VGS.RetailOS.Shared.Audit;
 
 namespace VGS.RetailOS.Infrastructure.ProductManagement.DAC.Entities;
 
-public class ProductEntity : IAuditableEntity
+public class ProductEntity : IAuditableEntity, ISoftDeletable
 {
     public Guid Id { get; set; }
     public string TenantId { get; set; } = null!;
@@ -26,6 +26,10 @@ public class ProductEntity : IAuditableEntity
     public TaxEntity? Tax { get; set; }
     
     public bool IsActive { get; set; } = true;
+    
+    public bool IsDeleted { get; set; }
+    public DateTimeOffset? DeletedAt { get; set; }
+    public Guid? DeletedBy { get; set; }
 
     public DateTimeOffset CreatedAt { get; set; }
     public Guid? CreatedBy { get; set; }

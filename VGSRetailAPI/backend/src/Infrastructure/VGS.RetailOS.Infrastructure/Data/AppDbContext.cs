@@ -30,12 +30,18 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, 
     public DbSet<VGS.RetailOS.Infrastructure.SupplierManagement.DAC.Entities.SupplierEntity> Suppliers { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.InventoryLedgerEntity> InventoryLedger { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.StockBalanceEntity> StockBalances { get; set; } = default!;
+    public DbSet<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.StockTransferEntity> StockTransfers { get; set; } = default!;
+    public DbSet<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.StockTransferItemEntity> StockTransferItems { get; set; } = default!;
+
     public DbSet<VGS.RetailOS.Infrastructure.PurchasingManagement.DAC.Entities.PurchaseEntity> Purchases { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.PurchasingManagement.DAC.Entities.PurchaseItemEntity> PurchaseItems { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.SalesManagement.DAC.Entities.SaleEntity> Sales { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.SalesManagement.DAC.Entities.SaleItemEntity> SaleItems { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.PaymentsManagement.Entities.PaymentEntity> Payments { get; set; } = default!;
     public DbSet<VGS.RetailOS.Infrastructure.ExpensesManagement.Entities.ExpenseEntity> Expenses { get; set; } = default!;
+    public DbSet<VGS.RetailOS.Infrastructure.ReturnsManagement.DAC.Entities.ReturnEntity> Returns { get; set; } = default!;
+    public DbSet<VGS.RetailOS.Infrastructure.ReturnsManagement.DAC.Entities.ReturnItemEntity> ReturnItems { get; set; } = default!;
+
 
     private string? CurrentTenantId => _tenantContextAccessor?.TenantContext?.CurrentTenantId;
 
@@ -74,21 +80,24 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, 
             .HasQueryFilter(t => CurrentTenantId == null || t.TenantId == CurrentTenantId);
 
         builder.Entity<VGS.RetailOS.Infrastructure.ProductManagement.DAC.Entities.ProductEntity>()
-            .HasQueryFilter(p => CurrentTenantId == null || p.TenantId == CurrentTenantId);
+            .HasQueryFilter(p => (CurrentTenantId == null || p.TenantId == CurrentTenantId) && !p.IsDeleted);
 
         builder.Entity<VGS.RetailOS.Infrastructure.CustomerManagement.DAC.Entities.CustomerEntity>()
-            .HasQueryFilter(c => CurrentTenantId == null || c.TenantId == CurrentTenantId);
+            .HasQueryFilter(c => (CurrentTenantId == null || c.TenantId == CurrentTenantId) && !c.IsDeleted);
 
         builder.Entity<VGS.RetailOS.Infrastructure.Settings.DAC.Entities.SettingEntity>()
             .HasQueryFilter(s => CurrentTenantId == null || s.TenantId == CurrentTenantId);
 
         builder.Entity<VGS.RetailOS.Infrastructure.SupplierManagement.DAC.Entities.SupplierEntity>()
-            .HasQueryFilter(s => CurrentTenantId == null || s.TenantId == CurrentTenantId);
+            .HasQueryFilter(s => (CurrentTenantId == null || s.TenantId == CurrentTenantId) && !s.IsDeleted);
 
         builder.Entity<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.InventoryLedgerEntity>()
             .HasQueryFilter(i => CurrentTenantId == null || i.TenantId == CurrentTenantId);
 
         builder.Entity<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.StockBalanceEntity>()
+            .HasQueryFilter(s => CurrentTenantId == null || s.TenantId == CurrentTenantId);
+
+        builder.Entity<VGS.RetailOS.Infrastructure.InventoryManagement.DAC.Entities.StockTransferEntity>()
             .HasQueryFilter(s => CurrentTenantId == null || s.TenantId == CurrentTenantId);
 
         builder.Entity<VGS.RetailOS.Infrastructure.PurchasingManagement.DAC.Entities.PurchaseEntity>()
@@ -108,5 +117,22 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, 
 
         builder.Entity<VGS.RetailOS.Infrastructure.ExpensesManagement.Entities.ExpenseEntity>()
             .HasQueryFilter(e => CurrentTenantId == null || e.TenantId == CurrentTenantId);
+
+        builder.Entity<VGS.RetailOS.Infrastructure.ReturnsManagement.DAC.Entities.ReturnEntity>()
+            .HasQueryFilter(r => CurrentTenantId == null || r.TenantId == CurrentTenantId);
+    }
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        foreach (var entry in ChangeTracker.Entries<VGS.RetailOS.Shared.Audit.ISoftDeletable>())
+        {
+            if (entry.State == EntityState.Deleted)
+            {
+                entry.State = EntityState.Modified;
+                entry.Entity.IsDeleted = true;
+                entry.Entity.DeletedAt = DateTimeOffset.UtcNow;
+            }
+        }
+        return base.SaveChangesAsync(cancellationToken);
     }
 }

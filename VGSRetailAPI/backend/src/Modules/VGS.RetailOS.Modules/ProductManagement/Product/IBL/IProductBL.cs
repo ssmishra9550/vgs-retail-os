@@ -9,4 +9,5 @@ public interface IProductBL
     Task<List<ProductResponse>> GetAllProductsAsync(CancellationToken cancellationToken);
     Task<ProductResponse> CreateProductAsync(CreateProductRequest request, CancellationToken cancellationToken);
     Task<ProductResponse> UpdateProductAsync(Guid id, UpdateProductRequest request, CancellationToken cancellationToken);
+    Task DeleteProductAsync(Guid id, CancellationToken cancellationToken);
 }

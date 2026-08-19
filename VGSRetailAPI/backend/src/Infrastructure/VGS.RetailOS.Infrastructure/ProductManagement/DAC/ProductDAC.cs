@@ -120,6 +120,18 @@ public class ProductDAC : IProductDAC
         return (await GetProductByIdAsync(product.Id, product.TenantId, cancellationToken))!;
     }
 
+    public async Task<bool> DeleteProductAsync(Guid id, string tenantId, CancellationToken cancellationToken)
+    {
+        var entity = await _dbContext.Products
+            .FirstOrDefaultAsync(p => p.Id == id && p.TenantId == tenantId, cancellationToken);
+            
+        if (entity == null) return false;
+        
+        _dbContext.Products.Remove(entity); // EF will intercept and perform soft delete
+        await _dbContext.SaveChangesAsync(cancellationToken);
+        return true;
+    }
+
     private ProductBO? MapToBO(ProductEntity? entity)
     {
         if (entity == null) return null;

@@ -97,7 +97,19 @@ public class CustomerDAC : ICustomerDAC
         return customer;
     }
 
-    private static CustomerBO MapToBO(CustomerEntity entity)
+    
+    public async Task<bool> DeleteCustomerAsync(Guid id, string tenantId, CancellationToken cancellationToken)
+    {
+        var entity = await _dbContext.Customers
+            .FirstOrDefaultAsync(p => p.Id == id && p.TenantId == tenantId, cancellationToken);
+            
+        if (entity == null) return false;
+        
+        _dbContext.Customers.Remove(entity);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+        return true;
+    }
+private static CustomerBO MapToBO(CustomerEntity entity)
     {
         return new CustomerBO
         {

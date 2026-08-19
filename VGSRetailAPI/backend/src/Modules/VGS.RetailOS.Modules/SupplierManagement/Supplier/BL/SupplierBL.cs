@@ -108,7 +108,15 @@ public class SupplierBL : ISupplierBL
         return tenantId;
     }
 
-    private static SupplierResponse MapToResponse(SupplierBO bo)
+    
+    public async Task DeleteSupplierAsync(Guid id, CancellationToken cancellationToken)
+    {
+        var tenantId = GetTenantId();
+        var success = await _supplierDac.DeleteSupplierAsync(id, tenantId, cancellationToken);
+        if (!success)
+            throw new NotFoundException($"'Supplier' with ID {id} not found.");
+    }
+private static SupplierResponse MapToResponse(SupplierBO bo)
     {
         return new SupplierResponse
         {

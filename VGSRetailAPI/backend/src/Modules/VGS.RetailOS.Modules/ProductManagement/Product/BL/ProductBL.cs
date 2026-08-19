@@ -100,6 +100,14 @@ public class ProductBL : IProductBL
         return MapToResponse(updated);
     }
 
+    public async Task DeleteProductAsync(Guid id, CancellationToken cancellationToken)
+    {
+        var tenantId = GetTenantId();
+        var success = await _productDac.DeleteProductAsync(id, tenantId, cancellationToken);
+        if (!success)
+            throw new NotFoundException($"Product with ID {id} not found.");
+    }
+
     private string GetTenantId()
     {
         var tenantId = _tenantContextAccessor.TenantContext?.CurrentTenantId;

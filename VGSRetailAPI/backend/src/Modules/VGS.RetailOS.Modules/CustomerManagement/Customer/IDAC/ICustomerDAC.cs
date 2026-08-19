@@ -10,4 +10,5 @@ public interface ICustomerDAC
     Task<CustomerBO> CreateCustomerAsync(CustomerBO customer, CancellationToken cancellationToken);
     Task<CustomerBO> UpdateCustomerAsync(CustomerBO customer, CancellationToken cancellationToken);
     Task UpdateCreditBalanceAsync(Guid customerId, string tenantId, decimal amount, CancellationToken cancellationToken);
+    Task<bool> DeleteCustomerAsync(Guid id, string tenantId, CancellationToken cancellationToken);
 }

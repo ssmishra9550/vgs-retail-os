@@ -53,4 +53,13 @@ public class CustomerController : ControllerBase
         var result = await _customerBl.UpdateCustomerAsync(id, request, cancellationToken);
         return Ok(result);
     }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> DeleteCustomer(Guid id, CancellationToken cancellationToken)
+    {
+        await _customerBl.DeleteCustomerAsync(id, cancellationToken);
+        return NoContent();
+    }
 }

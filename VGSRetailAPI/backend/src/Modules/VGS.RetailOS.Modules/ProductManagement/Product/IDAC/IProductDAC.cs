@@ -9,4 +9,5 @@ public interface IProductDAC
     Task<List<ProductBO>> GetAllProductsAsync(string tenantId, CancellationToken cancellationToken);
     Task<ProductBO> CreateProductAsync(ProductBO product, CancellationToken cancellationToken);
     Task<ProductBO> UpdateProductAsync(ProductBO product, CancellationToken cancellationToken);
+    Task<bool> DeleteProductAsync(Guid id, string tenantId, CancellationToken cancellationToken);
 }

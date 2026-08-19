@@ -10,4 +10,5 @@ public interface ISupplierBL
     Task<SupplierResponse?> GetSupplierByIdAsync(Guid id, CancellationToken cancellationToken);
     Task<List<SupplierResponse>> GetAllSuppliersAsync(CancellationToken cancellationToken);
     Task UpdateOutstandingPayableAsync(Guid supplierId, decimal amount, CancellationToken cancellationToken);
+    Task DeleteSupplierAsync(Guid id, CancellationToken cancellationToken);
 }

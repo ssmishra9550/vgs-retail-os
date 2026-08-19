@@ -122,7 +122,19 @@ public class SupplierDAC : ISupplierDAC
         return await query.AnyAsync(cancellationToken);
     }
 
-    private static SupplierBO MapToBO(SupplierEntity entity)
+    
+    public async Task<bool> DeleteSupplierAsync(Guid id, string tenantId, CancellationToken cancellationToken)
+    {
+        var entity = await _dbContext.Suppliers
+            .FirstOrDefaultAsync(p => p.Id == id && p.TenantId == tenantId, cancellationToken);
+            
+        if (entity == null) return false;
+        
+        _dbContext.Suppliers.Remove(entity);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+        return true;
+    }
+private static SupplierBO MapToBO(SupplierEntity entity)
     {
         return new SupplierBO
         {

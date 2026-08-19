@@ -24,8 +24,8 @@ public static class DbSeeder
 
         try
         {
-            logger.LogInformation("Ensuring database is created...");
-            await context.Database.EnsureCreatedAsync();
+            logger.LogInformation("Ensuring database is migrated...");
+            await context.Database.MigrateAsync();
 
             if (await context.Organizations.AnyAsync())
             {

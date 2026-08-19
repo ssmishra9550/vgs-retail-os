@@ -11,4 +11,5 @@ public interface ISupplierDAC
     Task<List<SupplierBO>> GetAllSuppliersAsync(string tenantId, CancellationToken cancellationToken);
     Task<bool> ExistsByNameAsync(string name, string tenantId, Guid? excludeId, CancellationToken cancellationToken);
     Task<bool> ExistsByMobileAsync(string mobile, string tenantId, Guid? excludeId, CancellationToken cancellationToken);
+    Task<bool> DeleteSupplierAsync(Guid id, string tenantId, CancellationToken cancellationToken);
 }
