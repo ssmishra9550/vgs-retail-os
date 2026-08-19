@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGS Retail OS - API & Architecture Overview</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #16a34a;
+            --warning: #eab308;
+            --danger: #dc2626;
+            --info: #0ea5e9;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: var(--primary);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .module-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .api-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .api-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .api-item:last-child {
+            border-bottom: none;
+        }
+
+        .method {
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-right: 15px;
+            min-width: 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .method.get { background-color: var(--info); }
+        .method.post { background-color: var(--success); }
+        .method.put { background-color: var(--warning); color: #000; }
+        .method.delete { background-color: var(--danger); }
+
+        .endpoint {
+            font-family: monospace;
+            font-size: 1rem;
+            color: var(--primary-dark);
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        /* Architecture Section */
+        .arch-list li {
+            margin-bottom: 12px;
+        }
+        .arch-list strong {
+            color: var(--primary-dark);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .status-badge.done { background-color: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .status-badge.pending { background-color: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>VGS Retail OS</h1>
+        <p>Comprehensive API Roadmap & Architecture Details</p>
+    </header>
+
+    <h2>1. Developed API Modules (Bane hue APIs)</h2>
+    <div class="status-badge done">✔ Status: Implemented</div>
+    
+    <div class="grid">
+        <!-- Auth & Tenancy -->
+        <div class="card">
+            <h3 class="module-title">🔐 Auth & Tenancy</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/auth/login</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/auth/refresh-token</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/organization</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/organization/{id}</span></li>
+                <li class="api-item"><span class="method put">PUT</span> <span class="endpoint">/api/v1/organization/{id}</span></li>
+            </ul>
+        </div>
+
+        <!-- Master Data -->
+        <div class="card">
+            <h3 class="module-title">📁 Master Data (Category, Brand, Tax, Unit)</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/{module}/</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/{module}/{id}</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/{module}/</span></li>
+                <li class="api-item"><span class="method put">PUT</span> <span class="endpoint">/api/v1/{module}/{id}</span></li>
+            </ul>
+        </div>
+
+        <!-- Inventory -->
+        <div class="card">
+            <h3 class="module-title">📦 Inventory Management</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/inventory/balance/{storeId}</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/inventory/balance/{storeId}/{prodId}</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/inventory/history/{storeId}/{prodId}</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/inventory/adjust</span></li>
+            </ul>
+        </div>
+
+        <!-- Purchasing -->
+        <div class="card">
+            <h3 class="module-title">🛒 Purchasing Management</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/purchase/store/{storeId}</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/purchase/{id}</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/purchase/drafts</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/purchase/{id}/receive</span></li>
+            </ul>
+        </div>
+
+        <!-- Sales -->
+        <div class="card">
+            <h3 class="module-title">🧾 Sales (POS)</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/sale/store/{storeId}</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/sale/{id}</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/sale</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/sale/{id}/complete</span></li>
+            </ul>
+        </div>
+
+        <!-- Reports -->
+        <div class="card">
+            <h3 class="module-title">📊 Reports & Analytics</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/report/dashboard/summary</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/report/dashboard/top-products</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/report/dashboard/low-stock</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/report/sales</span></li>
+            </ul>
+        </div>
+        
+        <!-- Operations & Identity -->
+        <div class="card">
+            <h3 class="module-title">⚙️ Ops (Store, Product, User, Supplier, Customer, Expense)</h3>
+            <ul class="api-list">
+                <li class="api-item"><i>(Standard CRUD implemented for all)</i></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">List & Fetch</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">Create</span></li>
+                <li class="api-item"><span class="method put">PUT</span> <span class="endpoint">Update</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2>2. Pending API Modules (Banana Baaki Hai)</h2>
+    <div class="status-badge pending">⏳ Status: In Roadmap</div>
+    
+    <div class="grid">
+        <div class="card">
+            <h3 class="module-title">🚚 Stock Transfers</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/stock-transfer/initiate</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/stock-transfer/{id}/receive</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/stock-transfer/transit</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="module-title">↩️ Returns & Refunds</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/return/customer</span></li>
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/return/supplier</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="module-title">🗑️ Soft Deletions</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method delete">DEL</span> <span class="endpoint">/api/v1/product/{id}</span></li>
+                <li class="api-item"><span class="method delete">DEL</span> <span class="endpoint">/api/v1/customer/{id}</span></li>
+                <li class="api-item"><span class="method delete">DEL</span> <span class="endpoint">/api/v1/supplier/{id}</span></li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3 class="module-title">🌐 Offline Sync (Future Phase)</h3>
+            <ul class="api-list">
+                <li class="api-item"><span class="method post">POST</span> <span class="endpoint">/api/v1/sync/push</span></li>
+                <li class="api-item"><span class="method get">GET</span> <span class="endpoint">/api/v1/sync/pull</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2>3. Architecture & Coding Style Details</h2>
+    <div class="card">
+        <h3 class="module-title">🏗️ Clean Architecture (Multilevel Design)</h3>
+        <p>Aapke backend ko bilkul enterprise-grade standards par design kiya gaya hai. Har flow 4 layers se gujarta hai:</p>
+        <ul class="arch-list">
+            <li><strong>1. API Controllers (ApiHost):</strong> Ye sirf HTTP requests (GET, POST) lete hain, validation karte hain, aur kaam aage badha dete hain. Yahan koi complex business logic nahi likha gaya hai.</li>
+            <li><strong>2. BL (Business Logic Layer) & IBL:</strong> Yahan system ka asli dimag hai. Tax calculate karna, stock check karna, permissions verify karna—sab yahan hota hai. Is layer ko DB se seedha matlab nahi hai, ye sirf <code>BO (Business Objects)</code> mein deal karta hai.</li>
+            <li><strong>3. DAC (Data Access Component) & IDAC:</strong> Ye layer database (PostgreSQL) se communicate karti hai using EF Core. Iska kaam BL se data (BO) lekar usko Entity mein badal kar DB mein save karna aur nikalna hai.</li>
+            <li><strong>4. BO & Entities:</strong> <code>Entities</code> wo class hain jo direct Database tables (schema) ko map karti hain. <code>BO</code> wo class hain jo ek layer se dusri layer tak data transport karti hain. Inhe alag rakhne se DB schema change karne par baaki app crash nahi hoti.</li>
+        </ul>
+
+        <h3 class="module-title">⚡ Coding Best Practices Used</h3>
+        <ul class="arch-list">
+            <li><strong>100% Async / Await:</strong> Har database call, har API endpoint <code>async Task</code> aur <code>await</code> ke sath likha gaya hai. Sath hi <code>CancellationToken</code> pas kiya gaya hai. Isse system hang nahi hota, chahe 1000 users ek sath kyu na login karein.</li>
+            <li><strong>Dependency Injection (DI):</strong> Interfaces (<code>IProductBL</code>, <code>IProductDAC</code>) ko Dependency Injection ke through connect kiya gaya hai. Isse code highly testable ban jata hai.</li>
+            <li><strong>Global Query Filters (Multi-tenancy):</strong> EF Core mein Global Query Filters set kiye gaye hain. Ek store ya tenant kabhi bhi galti se dusre tenant ka data nahi dekh sakta, kyunki query database level par hi filter ho jati hai.</li>
+            <li><strong>Global Exception Handling:</strong> Code ke andar chote-chote try-catch lagane ki jagah ek Centralized Error Handler (Middleware) banaya gaya hai. Agar koi error aata hai, toh API automatically ek clean Error JSON (400, 401, ya 500 status code) return karti hai, frontend app crash nahi hota.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
